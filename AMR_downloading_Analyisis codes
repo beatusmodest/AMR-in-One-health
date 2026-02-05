@@ -1,0 +1,1863 @@
+### Jan 2025
+## Dowload the sequences from NCBI
+## LIST OF ACCESSION NUMBER
+## Data Preprocessing
+## Quality check:
+### Searching from NCBI using key word Tanzania "Escherichia coli" 
+### Download samples from Kenya (accession numbers PRJEB32607)
+prefetch ERR3330256 
+prefetch ERR3330255
+prefetch ERR3330254
+prefetch ERR3330253
+prefetch ERR3330252
+prefetch ERR3330251
+prefetch ERR3330250
+prefetch ERR3330249
+prefetch ERR3330248
+prefetch ERR3330612
+prefetch ERR3330613
+prefetch ERR3330611
+prefetch ERR3330610
+prefetch ERR3330609
+prefetch ERR3330608
+prefetch ERR3330607
+prefetch ERR3330606
+prefetch ERR3330605
+prefetch ERR3330604
+prefetch ERR3330603
+prefetch ERR3330602
+prefetch ERR3330601
+prefetch ERR3330600
+prefetch ERR3330599
+prefetch ERR3330598
+prefetch ERR3330597
+prefetch ERR3330596
+prefetch ERR3330595
+prefetch ERR3330594
+prefetch ERR3330593
+prefetch ERR3330592
+prefetch ERR3330591
+prefetch ERR3330590
+prefetch ERR3330589
+prefetch ERR3330588
+prefetch ERR3330587
+prefetch ERR3330586
+prefetch ERR3330585
+prefetch ERR3330584
+prefetch ERR3330583
+prefetch ERR3330582
+prefetch ERR3330581
+prefetch ERR3330580
+prefetch ERR3330579
+prefetch ERR3330578
+prefetch ERR3330577
+prefetch ERR3330576
+prefetch ERR3330575
+prefetch ERR3330574
+prefetch ERR3330573
+prefetch ERR3330572
+prefetch ERR3330571
+prefetch ERR3330570
+prefetch ERR3330569
+prefetch ERR3330568
+prefetch ERR3330567
+prefetch ERR3330566
+prefetch ERR3330565
+prefetch ERR3330564
+prefetch ERR3330563
+prefetch ERR3330562
+prefetch ERR3330561
+prefetch ERR3330560
+prefetch ERR3330559
+prefetch ERR3330558
+prefetch ERR3330557
+prefetch ERR3330556
+prefetch ERR3330555
+prefetch ERR3330554
+prefetch ERR3330553
+prefetch ERR3330552
+prefetch ERR3330551
+prefetch ERR3330550
+prefetch ERR3330549
+prefetch ERR3330548
+prefetch ERR3330547
+prefetch ERR3330546
+prefetch ERR3330545
+prefetch ERR3330544
+prefetch ERR3330543
+prefetch ERR3330542
+prefetch ERR3330541
+prefetch ERR3330540
+prefetch ERR3330539
+prefetch ERR3330538
+prefetch ERR3330537
+prefetch ERR3330536
+prefetch ERR3330535
+prefetch ERR3330534
+prefetch ERR3330533
+prefetch ERR3330532
+prefetch ERR3330531
+prefetch ERR3330530
+prefetch ERR3330529
+prefetch ERR3330528
+prefetch ERR3330527
+prefetch ERR3330528
+prefetch ERR3330527
+prefetch ERR3330526
+prefetch ERR3330525
+prefetch ERR3330524
+prefetch ERR3330523
+prefetch ERR3330522
+prefetch ERR3330521
+prefetch ERR3330520
+
+########TANZANIA
+####### Human - KCRI
+prefetch ERR13420706
+prefetch ERR13420696
+prefetch ERR13420707
+prefetch ERR13420637
+prefetch ERR13420695
+prefetch ERR13420703
+prefetch ERR13420670
+prefetch ERR13420655
+prefetch ERR13420611
+prefetch ERR13420616
+prefetch ERR13420701
+prefetch ERR13420605
+prefetch ERR13420608
+prefetch ERR13420627
+prefetch ERR13420585
+prefetch ERR13420645
+prefetch ERR13420698
+prefetch ERR13420686
+prefetch ERR13420690
+prefetch ERR13420638
+prefetch ERR13420628
+prefetch ERR13420712
+prefetch ERR13420681
+prefetch ERR13420588
+prefetch ERR13420672
+prefetch ERR13420662
+prefetch ERR13420654
+prefetch ERR13420614
+prefetch ERR13420691
+prefetch ERR13420640
+prefetch ERR13420648
+prefetch ERR13420601
+prefetch ERR13420598
+prefetch ERR13420661
+prefetch ERR13420592
+prefetch ERR13420597
+prefetch ERR13420604
+prefetch ERR13420591
+prefetch ERR13420676
+prefetch ERR13420694
+prefetch ERR13420587
+prefetch ERR13420649
+prefetch ERR13420610
+prefetch ERR13420621
+prefetch ERR13420689
+prefetch ERR13420709
+prefetch ERR13420586
+prefetch ERR13420674
+prefetch ERR13420600
+prefetch ERR13420599
+
+####Tanzania - Morogoro  Human 
+#####accession number PRJEB65607 
+prefetch ERR13583310
+
+#### 25 companion animals and livestock in Tanzania
+prefetch ERR1202023
+prefetch ERR1202022
+prefetch ERR1202021
+prefetch ERR1202020
+prefetch ERR1202019
+prefetch ERR1202018
+prefetch ERR1202017
+prefetch ERR1202016
+prefetch ERR1202015
+prefetch ERR1202014
+prefetch ERR1202013
+prefetch ERR1202012
+prefetch ERR1202011
+prefetch ERR1202010
+prefetch ERR1202009
+prefetch ERR1202008
+prefetch ERR1202007
+prefetch ERR1202006
+prefetch ERR1202005
+prefetch ERR1202004
+prefetch ERR1202003
+prefetch ERR1202002
+prefetch ERR1202001
+prefetch ERR1202000
+prefetch ERR1201999
+
+####Unraveling virulence determinants in extended-spectrum beta-lactamase-producing Escherichia coli from Uganda and Tanzania using whole-genome sequencing
+
+##### Accession number PRJNA840888 
+prefetch SRR19352581
+prefetch SRR19352556
+prefetch SRR19352555
+prefetch SRR19352554
+prefetch SRR19352553
+prefetch SRR19352520
+prefetch SRR19352519
+prefetch SRR19352518
+prefetch SRR19352343
+prefetch SRR19352341
+prefetch SRR19352339
+prefetch SRR19352308
+prefetch SRR19351406
+prefetch SRR19351026
+prefetch SRR19351025
+prefetch SRR19351024
+prefetch SRR19351023
+prefetch SRR19351022
+prefetch SRR19351021
+prefetch SRR19351004
+prefetch SRR19351003
+prefetch SRR19349887
+prefetch SRR19349757
+prefetch SRR19349750
+prefetch SRR19349413
+prefetch SRR19349301
+prefetch SRR19349300
+prefetch SRR19349297
+prefetch SRR19349003
+prefetch SRR19348870
+prefetch SRR19348868
+prefetch SRR19348861
+prefetch SRR19348860
+prefetch SRR19348859
+prefetch SRR19348858
+prefetch SRR19348857
+prefetch SRR19348856
+prefetch SRR19348855
+prefetch SRR19348854
+prefetch SRR19348853
+prefetch SRR19348852
+prefetch SRR19348845
+prefetch SRR19348844
+prefetch SRR19348843
+prefetch SRR19348842
+prefetch SRR19348841
+prefetch SRR19348839
+prefetch SRR19348739
+prefetch SRR19348731
+
+### ESBL-Producing Escherichia coli isolated from Nile perch and aquatic environment of Lake Victoria, Tanzania
+#### accession number PRJEB34642 
+prefetch ERR3828658
+prefetch ERR3828656
+prefetch ERR3828655
+prefetch ERR3828657
+prefetch ERR3828654	
+prefetch ERR3828653	
+prefetch ERR3828652
+prefetch ERR3828651
+prefetch ERR3828650
+prefetch ERR3828649
+prefetch ERR3828648
+prefetch ERR3828647
+prefetch ERR3828645
+prefetch ERR3828644
+prefetch ERR3828643
+prefetch ERR3828642
+prefetch ERR3828641
+prefetch ERR3828640
+prefetch ERR3828639
+prefetch ERR3828638
+prefetch ERR3828637
+prefetch ERR3828636
+prefetch ERR3828635
+prefetch ERR3828634
+
+################# ESBL producers from fish and soil samples in Tanzania
+###########
+prefetch ERR1211733
+prefetch PRJEB12361 
+prefetch ERR1211732
+prefetch ERR1211731
+prefetch ERR1211730
+prefetch ERR1211729
+prefetch ERR1211728
+prefetch ERR1211727
+prefetch ERR1211726
+prefetch ERR1211725
+prefetch ERR1211724
+prefetch ERR1211723
+prefetch ERR1211722
+prefetch ERR1211721
+prefetch ERR1211720
+prefetch ERR1211719
+prefetch ERR1211718
+prefetch ERR1211717
+prefetch ERR1211716
+prefetch ERR1211715
+prefetch ERR1211714
+prefetch ERR1211713
+prefetch ERR1211712
+prefetch ERR1211711
+prefetch ERR1211710
+prefetch ERR1211709
+prefetch ERR1211708
+prefetch ERR1211707
+prefetch ERR1211706
+
+#####Sequencing of ESBL-producing E. coli from humans in Tanzania
+#### accession number PRJEB12376 
+
+prefetch ERR1366631
+prefetch ERR1366630
+prefetch ERR1366629	
+prefetch ERR1366628	
+prefetch ERR1366627
+prefetch ERR1366626
+prefetch ERR1366625
+prefetch ERR1366624
+prefetch ERR1366623
+prefetch ERR1366622
+prefetch ERR1366621
+prefetch ERR1366620
+prefetch ERR1366619
+prefetch ERR1366618
+prefetch ERR1366617
+prefetch ERR1366616
+prefetch ERR1366615
+prefetch ERR1366614
+prefetch ERR1366613
+prefetch ERR1366612
+prefetch ERR1366611
+prefetch ERR1366610
+prefetch ERR1366609
+prefetch ERR1366608
+prefetch ERR1366607
+
+
+
+###### Split files to make forward and reverse sequences as they are paired reads
+## use the following code
+#!/bin/bash
+
+# Directory containing SRA files
+SRA_DIR="./raw_kenya"
+# Directory to store FASTQ files
+OUTPUT_DIR="./fastq_output"
+mkdir -p "$OUTPUT_DIR"
+
+# Loop through all files starting with "ERR"
+for FILE in "$SRA_DIR"/ERR*.sra; do
+    BASENAME=$(basename "$FILE" .sra)
+    echo "Processing $BASENAME..."
+    fastq-dump --split-files --outdir "$OUTPUT_DIR" "$FILE"
+    if [ $? -eq 0 ]; then
+        echo "$BASENAME processed successfully."
+    else
+        echo "Error processing $BASENAME."
+    fi
+done
+
+###### make script executable
+chmod +x process_fastq.sh
+
+######### perform FastQC quality analysis on multiple FASTQ files in a director
+### the sequences were downloaded from the NCBI but it was important to perform QC to ensure data are of high quality
+## before further analysis of the sequence
+#!/bin/bash
+
+# Directory containing FASTQ files
+FASTQ_DIR="./fastq_files"
+# Directory to store FastQC output
+OUTPUT_DIR="./fastqc_output"
+mkdir -p "$OUTPUT_DIR"
+
+# Run FastQC on all FASTQ files in the directory
+for FASTQ_FILE in "$FASTQ_DIR"/*.fastq; do
+    echo "Running FastQC on $FASTQ_FILE..."
+    fastqc -o "$OUTPUT_DIR" "$FASTQ_FILE"
+    if [ $? -eq 0 ]; then
+        echo "FastQC completed for $FASTQ_FILE."
+    else
+        echo "Error running FastQC on $FASTQ_FILE."
+    fi
+done
+
+echo "All FastQC analyses are complete. Results are in $OUTPUT_DIR."
+
+###################### this will do fastaqc, unzip and multiqc in single run
+#!/bin/bash
+
+# Directories
+FASTQ_DIR="."          # Directory containing ERR*.fastq files
+FASTQC_OUTPUT_DIR="./fastqc_output" # Directory to store FastQC results
+MULTIQC_OUTPUT_DIR="./multiqc_output" # Directory to store MultiQC results
+
+# Create output directories if they do not exist
+mkdir -p "$FASTQC_OUTPUT_DIR"
+mkdir -p "$MULTIQC_OUTPUT_DIR"
+
+# Step 1: Run FastQC for all ERR*.fastq files
+echo "Running FastQC for all ERR files..."
+for FILE in "$FASTQ_DIR"/ERR*.fastq; do
+    if [ -f "$FILE" ]; then
+        echo "Processing $FILE..."
+        fastqc -o "$FASTQC_OUTPUT_DIR" "$FILE"
+    else
+        echo "No ERR*.fastq files found in $FASTQ_DIR."
+        exit 1
+    fi
+done
+echo "FastQC analysis complete."
+
+# Step 2: Unzip FastQC output files
+echo "Unzipping FastQC output files..."
+for ZIP_FILE in "$FASTQC_OUTPUT_DIR"/*.zip; do
+    if [ -f "$ZIP_FILE" ]; then
+        echo "Unzipping $ZIP_FILE..."
+        unzip -o "$ZIP_FILE" -d "$FASTQC_OUTPUT_DIR"
+    else
+        echo "No FastQC zip files found in $FASTQC_OUTPUT_DIR."
+        exit 1
+    fi
+done
+echo "Unzipping complete."
+
+# Step 3: Run MultiQC to summarize FastQC results
+echo "Running MultiQC..."
+multiqc "$FASTQC_OUTPUT_DIR" -o "$MULTIQC_OUTPUT_DIR"
+if [ $? -eq 0 ]; then
+    echo "MultiQC analysis complete. Results saved in $MULTIQC_OUTPUT_DIR."
+else
+    echo "MultiQC analysis failed. Please check the logs."
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###Assembly SPAdes 
+###try
+spades.py -1 ERR13420585_1.fastq.gz -2 ERR13420585_1.fastq.gz -o ERR13420585_spades -t 6 -m 8
+
+run_spades.sh#####for many samples
+#!/bin/bash
+
+# Loop through all paired-end FASTQ files in the directory
+for read1 in *_1.fastq.gz
+do
+    # Get the sample name by removing the "_1.fastq.gz" suffix
+    sample="${read1%_1.fastq.gz}"
+    
+    # Define the corresponding paired-end read2 file
+    read2="${sample}_2.fastq.gz"
+    
+    # Check if the second read file exists
+    if [[ -f "$read2" ]]; then
+        echo "Running SPAdes for sample: $sample"
+        
+        # Create an output directory for this sample
+        output_dir="${sample}_spades"
+        
+        # Run SPAdes
+        spades.py -1 "$read1" -2 "$read2" -o "$output_dir" -t 6 -m 8
+        
+        echo "SPAdes completed for sample: $sample"
+    else
+        echo "Paired read file for $sample not found, skipping..."
+    fi
+done
+
+###### then
+chmod +x run_spades.sh
+
+####
+./run_spades.sh
+
+
+###### 
+
+
+prokka --outdir prokka_output --prefix annotation contigs.fasta
+
+####for multiple samples
+#!/bin/bash
+
+# Loop through all contigs.fasta files in the current directory and subdirectories
+find . -type f -name "contigs.fasta" | while read contig_fasta
+do
+    # Extract the sample name by removing the "contigs.fasta" suffix and the directory path
+    sample=$(basename "${contig_fasta%_contigs.fasta}")
+    
+    # Define the output directory for Prokka
+    output_dir="${sample}_prokka_output"
+    
+    # Run Prokka
+    prokka --outdir "$output_dir" --prefix annotation "$contig_fasta"
+    
+    echo "Prokka completed for sample: $sample"
+done
+#######
+#!/bin/bash
+
+# Loop through all contigs.fasta files in the current directory and subdirectories
+find . -type f -name "contigs.fasta" | while read contig_fasta
+do
+    # Get the directory where the contigs.fasta file is located
+    output_dir=$(dirname "$contig_fasta")
+    
+    # Define the sample name for annotation prefix
+    sample=$(basename "${contig_fasta}" .fasta)
+    
+    # Run Prokka with the output saved in the same directory
+    prokka --outdir "$output_dir" --prefix annotation "$contig_fasta"
+    
+    echo "Prokka completed for sample: $sample, output saved in $output_dir"
+done
+
+###
+#!/bin/bash
+
+# Loop through all contigs.fasta files in the current directory and subdirectories
+find . -type f -name "contigs.fasta" | while read contig_fasta
+do
+    # Get the directory where the contigs.fasta file is located
+    parent_dir=$(dirname "$contig_fasta")
+    
+    # Create a subfolder named "prokka_output" inside the directory
+    output_dir="$parent_dir/prokka_output"
+    mkdir -p "$output_dir"  # Create the output directory if it doesn't already exist
+    
+    # Define the sample name for annotation prefix
+    sample=$(basename "${contig_fasta}" .fasta)
+    
+    # Run Prokka and save the output in the subfolder
+    prokka --outdir "$output_dir" --prefix "$sample" "$contig_fasta"
+    
+    echo "Prokka completed for sample: $sample, output saved in $output_dir"
+done
+
+######################
+Script for SNP Calling After Prokka with conda install -c conda-forge -c bioconda -c defaults snippy
+###############################
+
+#!/bin/bash
+
+# Directory to store all collected .gff files
+COLLECT_DIR="./collected_gff"
+mkdir -p "$COLLECT_DIR"
+
+# Step 1: Find and collect all .gff files from Prokka output directories
+echo "Collecting .gff files from Prokka outputs..."
+find . -type f -name "*.gff" | while read gff_file
+do
+    # Extract the sample name (parent directory name)
+    sample_name=$(basename "$(dirname "$gff_file")")
+    
+    # Copy .gff files to the collection directory with sample name
+    cp "$gff_file" "$COLLECT_DIR/${sample_name}_$(basename "$gff_file")"
+done
+
+# Step 2: Run Roary for core genome alignment
+echo "Running Roary on collected .gff files..."
+roary -e -n -p 8 "$COLLECT_DIR"/*.gff
+
+# Step 3: Run Snippy on the core genome alignment
+echo "Running Snippy on core genome alignment..."
+snippy-core --ref core_gene_alignment.aln --outdir snippy_output
+
+echo "SNP calling completed. Results saved in snippy_output/"
+
+
+
+##########
+quast.py contigs.fasta -o quast_output
+
+
+
+#################### collect gff files
+#!/bin/bash
+
+# Base directory to store all collected .gff files
+BASE_COLLECT_DIR="./collected_gff"
+
+# Step 1: Find and collect all .gff files from Prokka output directories
+echo "Collecting .gff files into corresponding subdirectories..."
+find . -type f -name "*.gff" | while read gff_file
+do
+    # Extract the sample name (parent directory name of the .gff file)
+    sample_name=$(basename "$(dirname "$gff_file")")
+    
+    # Define the target subdirectory inside collected_gff
+    target_dir="$BASE_COLLECT_DIR/$sample_name"
+    mkdir -p "$target_dir"  # Create the subdirectory if it doesn't exist
+
+    # Generate the target file name with the original .gff file name
+    target_file="$target_dir/$(basename "$gff_file")"
+
+    # Handle overwriting: Ensure unique file name
+    if [[ -e "$target_file" ]]; then
+        count=1
+        while [[ -e "$target_dir/$(basename "${gff_file%.gff}")_$count.gff" ]]; do
+            ((count++))
+        done
+        target_file="$target_dir/$(basename "${gff_file%.gff}")_$count.gff"
+    fi
+
+    # Copy the .gff file to the target subdirectory
+    cp "$gff_file" "$target_file"
+    echo "Collected: $target_file"
+done
+
+
+
+#### more advanced
+#!/bin/bash
+
+# Directory to store all collected .fna files
+COLLECT_DIR="./collected_sequences"
+mkdir -p "$COLLECT_DIR"
+
+# Function to generate a unique ID
+generate_unique_id() {
+    echo "$(date +%Y%m%d%H%M%S)_$RANDOM"
+}
+
+# Step: Collect .fna files into one directory
+echo "Collecting .fna files into $COLLECT_DIR..."
+find . -type f -name "*.fna" | while read fna_file; do
+    # Extract folder name as sample ID
+    sample_name=$(basename "$(dirname "$fna_file")")
+    
+    # Generate a unique ID to ensure unique filenames
+    unique_id=$(generate_unique_id)
+    
+    # Target file path with sample name and unique ID
+    target_file="$COLLECT_DIR/${sample_name}_${unique_id}.fna"
+    
+    # Copy file to the collection directory
+    cp "$fna_file" "$target_file"
+    
+    echo "Collected: $target_file"
+done
+
+# Completion message
+echo "All .fna files collected into $COLLECT_DIR."
+
+# Step 3: Run Roary to create a core genome alignment
+echo "Running Roary for core genome alignment..."
+CORE_GENOME_DIR="./core_genome_roary"
+mkdir -p "$CORE_GENOME_DIR"
+roary -e -n -v -f -p 8 "$CORE_GENOME_DIR" "$GFF_DIR"/*.gff
+echo "Roary analysis complete. Results in $CORE_GENOME_DIR"
+
+# Step 4: Run Panaroo as an alternative to Roary
+echo "Running Panaroo for core genome alignment..."
+CORE_GENOME_DIR_PANAROO="./core_genome_panaroo"
+mkdir -p "$CORE_GENOME_DIR_PANAROO"
+panaroo -i "$GFF_DIR"/*.gff -o "$CORE_GENOME_DIR_PANAROO" --clean-mode strict --aligner mafft
+echo "Panaroo analysis complete. Results in $CORE_GENOME_DIR_PANAROO"
+
+# Step 5: Run kSNP3 for SNP calling directly from .fna files
+echo "Running kSNP3 for SNP calling..."
+KSNP3_OUTPUT_DIR="./kSNP3_output"
+mkdir -p "$KSNP3_OUTPUT_DIR"
+FNA_LIST="$KSNP3_OUTPUT_DIR/genome_list.txt"
+find "$FNA_DIR" -name "*.fna" > "$FNA_LIST"
+
+# Set k-mer size based on genome size (use kSNP3’s Kchooser if needed)
+KMER_SIZE=21
+kSNP3 -in "$FNA_LIST" -outdir "$KSNP3_OUTPUT_DIR" -k "$KMER_SIZE"
+
+echo "kSNP3 SNP calling complete. Results in $KSNP3_OUTPUT_DIR"
+
+###############Reference genome
+ENA|U00096|U00096.3 Escherichia coli str. K-12 substr. MG1655, complete genome
+
+Prepare the Reference Genome:
+bwa index U00096.3.fasta
+samtools faidx U00096.3.fasta
+
+#############
+bwa mem -t 4  /media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/reference_genom_2/U00096.3.fasta *.fna > sample.sam
+
+
+bcftools --versionbcftools mpileup -f /media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/reference_genom_2/U00096.3.fasta sample.sorted.bam | bcftools call -mv -Oz -o sample.vcf.gz
+bcftools index sample.vcf.gz
+
+
+
+##################### Alternative for SNP calling with reference genome
+snippy --ref /media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/reference_genom_2/U00096.3.fasta --outdir snippy_sample1 --cpus 4 --clean --seq annotation.fna
+
+####Script for SNP Calling with .fna Files
+
+#!/bin/bash
+
+# Set reference genome and output directories
+REFERENCE="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/reference_genom_2/U00096.3.fasta"
+ALIGN_DIR="./alignments"
+VCF_DIR="./bcftools_results"
+mkdir -p "$ALIGN_DIR" "$VCF_DIR"
+
+# Function to extract unique sample ID
+extract_sample_id() {
+    local filepath="$1"
+    echo "$(basename "$filepath" .fna)"
+}
+
+# Check required tools
+echo "Checking tools..."
+if ! command -v bwa &> /dev/null; then echo "Error: bwa is not installed."; exit 1; fi
+if ! command -v samtools &> /dev/null; then echo "Error: samtools is not installed."; exit 1; fi
+if ! command -v bcftools &> /dev/null; then echo "Error: bcftools is not installed."; exit 1; fi
+
+# Check BCFtools version
+echo "Using BCFtools version: $(bcftools --version | head -n 1)"
+
+# Process all .fna files
+echo "Starting alignment and SNP calling..."
+find . -type f -name "*.fna" | while read fna_file; do
+    # Extract sample ID
+    sample_id=$(extract_sample_id "$fna_file")
+
+    # Define file paths
+    bam_file="$ALIGN_DIR/${sample_id}.sorted.bam"
+    vcf_gz_file="$VCF_DIR/${sample_id}.vcf.gz"
+
+    # Step 1: Align .fna file to reference genome
+    echo "Aligning $fna_file to $REFERENCE..."
+    bwa mem "$REFERENCE" "$fna_file" | \
+    samtools view -b - | \
+    samtools sort -o "$bam_file"
+    samtools index "$bam_file"
+
+    # Step 2: Call SNPs using bcftools
+    echo "Calling SNPs for $sample_id..."
+    bcftools mpileup -f "$REFERENCE" "$bam_file" | \
+    bcftools call -mv -Oz -o "$vcf_gz_file"
+    bcftools index "$vcf_gz_file"
+
+    # Confirm completion
+    echo "Completed SNP calling for $sample_id. Results: $vcf_gz_file"
+done
+
+# Completion message
+echo "SNP calling completed for all .fna files. Results saved in $VCF_DIR."
+
+###################
+sort and merging vcf files
+#!/bin/bash
+
+# Directory containing the VCF files
+VCF_DIR="./"  # Current directory
+
+# Output file for the merged VCF
+MERGED_VCF="merged.vcf.gz"
+
+# Temporary file to hold the list of sorted VCF files
+SORTED_LIST="sorted_vcf_files.txt"
+
+# Step 1: Sort and index all VCF files
+echo "Sorting and indexing VCF files..."
+> "$SORTED_LIST"  # Clear the list file
+for vcf_file in "$VCF_DIR"/*.vcf.gz
+do
+    # Extract the base filename without the extension
+    base_name=$(basename "$vcf_file" .vcf.gz)
+    
+    # Define sorted output file name
+    sorted_vcf="${base_name}_sorted.vcf.gz"
+    
+    # Sort the VCF file
+    echo "Sorting $vcf_file..."
+    bcftools sort -Oz -o "$VCF_DIR/$sorted_vcf" "$vcf_file"
+    
+    # Index the sorted VCF file
+    echo "Indexing $sorted_vcf..."
+    bcftools index "$VCF_DIR/$sorted_vcf"
+    
+    # Add sorted VCF to the list
+    echo "$VCF_DIR/$sorted_vcf" >> "$SORTED_LIST"
+done
+
+# Step 2: Merge all sorted VCF files
+echo "Merging sorted VCF files..."
+bcftools merge -l "$SORTED_LIST" -Oz -o "$VCF_DIR/$MERGED_VCF"
+
+# Step 3: Index the merged VCF file
+echo "Indexing the merged VCF file..."
+bcftools index "$VCF_DIR/$MERGED_VCF"
+
+# Cleanup temporary file
+rm -f "$SORTED_LIST"
+
+echo "VCF files have been successfully merged into $MERGED_VCF and indexed."
+
+
+
+
+#################Population Structure Analysis
+1. Tools like PLINK, ADMIXTURE, 
+1.1 Principal Component Analysis (PCA)
+
+plink --vcf filtered.vcf.gz --allow-extra-chr --double-id --make-bed --out population_data
+
+Perform additional quality control to ensure your dataset is robust:
+
+Remove SNPs with high missingness
+
+
+
+### run mslt
+#!/bin/bash
+
+# Directory containing the genome files
+GENOME_DIR="./"
+
+# Loop through all .fna files in the directory
+for genome in $GENOME_DIR/*.fna
+do
+    # Extract the sample name from the filename (without extension)
+    sample_name=$(basename "$genome" .fna)
+    
+    # Run MLST on each genome
+    mlst --scheme ecoli_achtman_4 "$genome" > "${sample_name}_mlst.txt"
+    
+    echo "MLST completed for sample: $sample_name"
+done
+##### 
+From VCF to Phylogenetic Tree
+Ensure the VCF file only includes high-quality, biallelic SNPs (single nucleotide polymorphisms) and samples of interest.
+
+vcftools --gzvcf merged.vcf.gz --remove-indels --minQ 20 --minDP 10 --max-missing 0.1 --recode --out filtered_vcf
+
+#### Then snp-sites -m -o aligned_sequences.phy filtered_vcf.recode.vcf
+
+## convert vcf to fasta
+# Set variables
+
+REF_DIR='/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/reference_genom_2'
+REF='U00096.3.fasta'
+VCF='/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/fish_soil/fastq_output/collected_sequences/bcftools_results/vcf_files/prokka_output_20250125184738_12148_sorted.vcf.gz'
+OUT_DIR='/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/fasta_sequences'
+OUT_FILE='prokka_output_20250125184738_12148_sorted.vcf.gz.fasta'
+
+# Step 1: Create output directory if it doesn't exist
+mkdir -p $OUT_DIR
+
+# Step 2: Ensure the VCF file is properly indexed
+echo "Indexing VCF file with tabix..."
+tabix -p vcf $VCF
+
+# Step 3: Ensure the reference genome is indexed
+echo "Indexing reference genome with samtools and GATK..."
+samtools faidx $REF_DIR/$REF
+gatk CreateSequenceDictionary \
+    -R $REF_DIR/$REF \
+    -O $REF_DIR/$(basename $REF .fasta).dict
+
+# Step 4: Run GATK FastaAlternateReferenceMaker
+echo "Generating alternate reference FASTA..."
+gatk FastaAlternateReferenceMaker \
+   -R $REF_DIR/$REF \
+   -O $OUT_DIR/$OUT_FILE \
+   -V $VCF
+
+# Step 5: Verify the output
+echo "Output saved to $OUT_DIR/$OUT_FILE. Verifying output..."
+head -n 20 $OUT_DIR/$OUT_FILE
+
+
+######for many files "sorted_vcf_files"
+
+
+# Set variables
+REF_DIR='/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/reference_genom_2'
+REF='U00096.3.fasta'
+VCF_DIR='/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_Uganda_Tanzania/fastq_output/vcf_results'
+OUT_DIR='/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_Uganda_Tanzania/fastq_output/vcf_results/fasta_sequences'
+
+# Step 1: Ensure the reference genome is indexed
+echo "Indexing reference genome with samtools and GATK..."
+samtools faidx $REF_DIR/$REF
+gatk CreateSequenceDictionary \
+    -R $REF_DIR/$REF \
+    -O $REF_DIR/$(basename $REF .fasta).dict
+
+# Step 2: Loop over all VCF files in the directory
+for VCF in $VCF_DIR/*.vcf.gz; do
+    SAMPLE_NAME=$(basename $VCF .vcf.gz)
+    OUT_FILE="${SAMPLE_NAME}.fasta"
+
+    # Step 3: Ensure the VCF file is properly indexed
+    echo "Indexing VCF file $VCF with tabix..."
+    tabix -p vcf $VCF
+
+    # Step 4: Run GATK FastaAlternateReferenceMaker for each sample
+    echo "Generating alternate reference FASTA for sample $SAMPLE_NAME..."
+    gatk FastaAlternateReferenceMaker \
+        -R $REF_DIR/$REF \
+        -O $OUT_DIR/$OUT_FILE \
+        -V $VCF
+
+    # Step 5: Verify the output
+    echo "Output saved to $OUT_DIR/$OUT_FILE. Verifying output..."
+    head -n 20 $OUT_DIR/$OUT_FILE
+done
+
+
+################
+#steps for Generating a Phylogenetic Tree
+#Multiple Sequence Alignment (MSA) with MAFFT
+mafft --auto all_samples.fasta > all_samples_aligned.fasta
+
+
+
+
+
+
+############### Copy files to hpc
+scp all_samples.fasta blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_genome
+
+scp renamed_sequences_kcri.fasta  blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_genome
+
+scp renamed_fish_sequences.fasta  blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_genome
+scp blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_genome/combined_all_samples.fasta .
+
+scp blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_genome/renamed_* .
+pwd: clemence2010
+
+
+awk '/^>/{header=$0; count[header]++; if(count[header]>1) header=header"_"count[header]; print header; next} {print}' all_samples.fasta > all_samples_unique.fasta
+
+awk '/^>/ {print ">raw_kenya_" ++i; next} {print}' raw_kenya_merged.fasta > renamed_kenya.fasta
+
+
+
+awk '/^>/ {print ">fish" ++count} !/^>/ {print}' all_samples_fish.fasta > renamed_fish_sequences.fasta
+
+
+#####
+#!/bin/bash -e
+#SBATCH -p batch 
+#SBATCH -n 4
+#SBATCH -J TREE
+
+#load the module 
+module load mafft/7.505
+module load clustalw/2.1 
+module load RAxML/8.2.12
+
+clustalw2 -infile=combined_all_samples.fasta -outfile=combined_all_samples_aligned.fasta -align -output=fasta
+
+
+# Align the sequences with Clustal Omega
+echo "Aligning combined_all_samples.fasta with Clustal Omega"
+clustalw2 -infile=combined_all_samples.fasta -outfile=combined_all_samples_aligned.fasta -align -output=fasta
+
+# Run RAxML to build the phylogenetic tree from the aligned sequences
+echo "Running RAxML for combined_all_samples_aligned.fasta"
+
+raxmlHPC-PTHREADS-AVX -T 5 -s combined_all_samples_aligned.fasta -n combined_all_samples_tree -m GTRGAMMA -p 12345
+
+
+
+
+combined_all_samples.fasta
+
+clustalw2 -INFILE=combined_all_samples.fasta -OUTFILE=aligned_output.fasta -TYPE=DNA
+
+
+
+
+
+mafft --auto combined_all_samples.fasta > mafft_results/aligned.fasta
+
+
+mafft --thread 20 --maxiterate 1000 --localpair combined_all_samples.fasta > aligned.fasta
+
+
+mafft --thread 20 --parttree combined_all_samples.fasta > aligned.fasta
+
+
+
+
+
+
+################
+# perform linkage pruning - i.e. identify prune sites
+plink --vcf merged.vcf.gz \
+ --double-id  \
+--allow-extra-chr \
+--set-missing-var-ids @:# \
+--indep-pairwise 200 10 0.1 \
+--out merged
+###
+plink --vcf companion_liv__merged.vcf.gz --double-id  --allow-extra-chr --pca --out pca_results
+
+
+####################
+######################
+re run the vcf calling
+#!/bin/bash
+
+# Set paths
+REFERENCE="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/reference_genom_2/U00096.3.fasta"  # Update if needed
+OUTPUT_DIR="./vcf_results"
+THREADS=4  # Adjust based on system resources
+
+# Create output directory if it doesn't exist
+mkdir -p $OUTPUT_DIR
+
+# Index reference genome (run once)
+bwa index $REFERENCE
+samtools faidx $REFERENCE
+gatk CreateSequenceDictionary -R $REFERENCE
+
+# Loop through all sample pairs
+for SAMPLE in $(ls *_1.fastq.gz | sed 's/_1.fastq.gz//'); do
+    echo "Processing sample: $SAMPLE"
+
+    # Step 1: Align reads to reference genome
+    bwa mem -t $THREADS $REFERENCE ${SAMPLE}_1.fastq.gz ${SAMPLE}_2.fastq.gz > ${SAMPLE}.sam
+
+    # Step 2: Convert SAM to sorted BAM
+    samtools view -bS ${SAMPLE}.sam | samtools sort -o ${SAMPLE}_sorted.bam
+    rm ${SAMPLE}.sam  # Remove large intermediate SAM file
+
+    # Step 3: Index BAM
+    samtools index ${SAMPLE}_sorted.bam
+
+    # Step 4: Variant calling using bcftools
+    bcftools mpileup -f $REFERENCE ${SAMPLE}_sorted.bam | bcftools call -mv -Ov -o ${OUTPUT_DIR}/${SAMPLE}.vcf
+
+    # Optional: Filter variants
+    bcftools filter -i 'QUAL>30 & DP>10' -o ${OUTPUT_DIR}/${SAMPLE}_filtered.vcf ${OUTPUT_DIR}/${SAMPLE}.vcf
+
+    echo "Variant calling completed for $SAMPLE"
+done
+
+echo "All samples processed successfully!"
+
+###########################
+########################## Use amrfinder  to locate AMR gene of interest and then select specific gene for further analysis
+1. amrfinder -n ERR13420701_contigs.fasta -o amr_results.txt --organism "Escherichia"
+2. samtools faidx ERR13420701_contigs.fasta NODE_76:16911-17783 > NODE_76_CTXM_region.fasta
+3. NODE_76_CTXM_region.fasta will be used for further analysis 
+
+######do the first in for loop
+#!/bin/bash
+
+# Loop through all subdirectories
+for dir in */; do
+    # Check if the directory contains a FASTA file
+    if ls "$dir"/contigs.fasta 1> /dev/null 2>&1; then
+        # Extract the subdirectory name (removing trailing slash)
+        subdir_name=$(basename "$dir")
+
+        # Run AMRFinderPlus for each FASTA file in the subdirectory
+        for fasta in "$dir"/contigs.fasta; do
+            echo "Processing $fasta in $subdir_name..."
+
+            # Run AMRFinderPlus and output to a temporary file
+            amrfinder -n "$fasta" -o "$dir/amr_results_temp.txt" --organism "Escherichia"
+
+            # Add subdirectory name as a new column in the output
+            awk -v id="$subdir_name" 'BEGIN {OFS="\t"} NR==1 {print $0, "Subdir_ID"} NR>1 {print $0, id}' "$dir/amr_results_temp.txt" > "$dir/amr_results.txt"
+
+            # Remove temporary file
+            rm "$dir/amr_results_temp.txt"
+        done
+    fi
+done
+
+#######################
+####################3# merge all the AMR
+#!/bin/bash
+
+# Define the output file
+output_file="merged_amr_results.txt"
+
+# Initialize the output file with the header from the first amr_results.txt found
+first_file=true
+
+# Loop through all subdirectories
+for dir in */; do
+    # Check if amr_results.txt exists in the subdirectory
+    if [ -f "$dir/amr_results.txt" ]; then
+        if $first_file; then
+            # Copy the header and content for the first file
+            cat "$dir/amr_results.txt" > "$output_file"
+            first_file=false
+        else
+            # Skip the header and append the content for subsequent files
+            tail -n +2 "$dir/amr_results.txt" >> "$output_file"
+        fi
+    fi
+done
+##############################
+
+df = pd.read_csv('Betalactamase_ctsm.csv', sep='\t')
+
+df_summary = df[['Gene symbol', 'Sequence name', 'Element type']]
+
+# Select relevant columns
+df_summary = df[['Contig id', 'Start', 'Stop', 'Element symbol', 'Element name','source']]
+
+
+#############
+# Create a pivot table
+c
+# Create a pivot table
+pivot_table = df_summary.pivot_table(index='Element symbol', columns='source', aggfunc='size', fill_value=0)
+
+
+# Save the summary table
+pivot_table.to_csv('betalactam_amr_summary_table.csv')
+
+
+
+
+###########MLST analysis
+
+mlst --scheme ecoli renamed_* > mlst_results.txt
+
+import pandas as pd
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
+from scipy.spatial.distance import pdist, squareform
+
+df = pd.read_csv("mlst_results_all3.txt", sep="\t", header=None)
+
+
+
+
+dinB	icdA	pabB	polB	putP	trpA	trpB	udiA
+
+
+############################## 
+Sample_id       Species ST      dinB    icdA    pabB    polB    putP    trpA    trpB    udiA    source
+
+Sample_id	Species	ST	dinB	icdA	pabB	polB	putP	trpA	trpB	udiA
+
+source	Species	ST	dinB	icdA	pabB	polB	putP	trpA	trpB	udiA
+
+
+columns = ["source", "Species", "ST", "dinB", "icdA", "pabB", "polB", "putP", "trpA", "trpB", "udiA"]
+df.columns = columns
+
+################# mlst_results_all.txt
+dist_matrix = squareform(pdist(allele_profiles.values, metric=lambda u, v: hamming_distance(u, v)))
+
+# Create a graph from the distance matrix
+G = nx.Graph()
+num_nodes = len(df)
+for i in range(num_nodes):
+    for j in range(i+1, num_nodes):
+        G.add_edge(df.iloc[i, 0], df.iloc[j, 0], weight=dist_matrix[i, j])
+
+# Compute Minimum Spanning Tree (MST)
+mst = nx.minimum_spanning_tree(G)
+
+# Define color mapping for sources
+source_categories = df["source"].unique()
+color_map = {source: color for source, color in zip(source_categories, ["red", "blue", "green", "orange", "purple"])}
+
+# Assign colors to nodes
+node_colors = [color_map[df[df["Isolate"] == node]["Source"].values[0]] for node in mst.nodes]
+
+# Plot MST
+plt.figure(figsize=(12, 8))
+pos = nx.spring_layout(mst, seed=42)  # Layout for better visualization
+nx.draw(mst, pos, with_labels=True, node_color=node_colors, edge_color='gray', font_size=8, node_size=700)
+
+#####################
+import pandas as pd
+import numpy as np
+import networkx as nx
+import matplotlib.pyplot as plt
+from scipy.spatial.distance import pdist, squareform
+
+# Load MLST results
+df = pd.read_csv("mlst_results.txt", sep="\t", header=0)  # Ensure header row is used
+
+# Convert column names to lowercase for consistency
+df.columns = [col.lower() for col in df.columns]
+
+# Extract MLST allele profiles (excluding non-genetic columns)
+allele_profiles = df.iloc[:, 3:].astype(str)  # Ensure all values are treated as strings
+
+# Compute pairwise Hamming distances
+def hamming_distance(seq1, seq2):
+    return sum(a != b for a, b in zip(seq1, seq2))
+
+dist_matrix = squareform(pdist(allele_profiles.values, metric=lambda u, v: hamming_distance(u, v)))
+
+# Create graph and add edges
+G = nx.Graph()
+num_nodes = len(df)
+
+for i in range(num_nodes):
+    for j in range(i + 1, num_nodes):
+        G.add_edge(df.iloc[i, 0], df.iloc[j, 0], weight=dist_matrix[i, j])
+
+# Compute Minimum Spanning Tree (MST)
+mst = nx.minimum_spanning_tree(G)
+
+# Define color mapping for sources
+if "source" in df.columns:
+    source_col = "source"
+    source_categories = df[source_col].unique()
+    colors = ["red", "blue", "green", "orange", "purple", "brown", "pink"]  # Extend if needed
+    color_map = {source: colors[i % len(colors)] for i, source in enumerate(source_categories)}
+
+    # Assign colors to nodes based on Source
+    node_colors = [color_map.get(df[df["isolate"] == node][source_col].values[0], "gray") for node in mst.nodes]
+else:
+    node_colors = "gray"  # Default color if 'source' column is missing
+
+# Plot MST
+plt.figure(figsize=(14, 10))
+pos = nx.spring_layout(mst, seed=42)  # Improve visualization
+nx.draw(mst, pos, with_labels=True, node_color=node_colors, edge_color='gray', font_size=8, node_size=700)
+
+# Add edge weights as labels
+edge_labels = {(u, v): f"{d['weight']:.0f}" for u, v, d in mst.edges(data=True)}
+nx.draw_networkx_edge_labels(mst, pos, edge_labels=edge_labels, font_size=6)
+
+# Create a legend if 'source' column exists
+if "source" in df.columns:
+    legend_labels = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=color, markersize=10) 
+                     for source, color in color_map.items()]
+    plt.legend(legend_labels, source_categories, title="Isolate Source", loc="upper right")
+
+plt.title("Minimum Spanning Tree of MLST Data (Colored by Source)")
+plt.show()
+
+
+
+####################### Finding plasmids
+
+plasmidfinder.py -i spades_output/contigs.fasta -o plasmidfinder_output
+
+#!/bin/bash
+
+# Define input base directory (Modify this if needed)
+INPUT_BASE_DIR="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/fish_soil/fastq_output"
+
+# Define output base directory
+OUTPUT_BASE_DIR="plasmidfinder_output"
+
+# Create output directory if it doesn't exist
+mkdir -p "$OUTPUT_BASE_DIR"
+
+# Find all contigs.fasta files inside *_spades directories
+find "$INPUT_BASE_DIR" -type f -name "*_contigs.fasta" | while read -r input_file; do
+    # Extract sample folder (removes '/*_contigs.fasta' from path)
+    sample_folder=$(dirname "$input_file")
+
+    # Extract sample name (remove full path and _spades suffix)
+    sample_name=$(basename "$sample_folder" | sed 's/_spades//')
+
+    # Define output directory for this sample
+    output_dir="$OUTPUT_BASE_DIR/$sample_name"
+    mkdir -p "$output_dir"
+
+    # Run PlasmidFinder
+    echo "Processing sample: $sample_name"
+    plasmidfinder.py -i "$input_file" -o "$output_dir" 2>&1 | tee "$output_dir/log.txt"
+
+done
+
+echo "PlasmidFinder analysis completed."
+
+
+
+###################alternative
+for sample in $(ls /path_to_fastq_files/*.fasta); do
+    # Run PlasmidFinder
+    plasmidfinder.py -i $sample -o output_folder
+
+    # Run AMRFinderPlus
+    amrfinder -n $sample -o amrfinder_results.tsv
+done
+###################
+#!/bin/bash
+# Set the input directory
+INPUT_DIR="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_companion_animals_livestock/fastq_output"
+
+# Output directory for results
+OUTPUT_DIR="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/analysis_plasmis_results"
+mkdir -p $OUTPUT_DIR
+
+# Loop through each sample directory
+for sample in $(ls $INPUT_DIR | grep "spades"); do
+    SAMPLE_PATH="$INPUT_DIR/$sample"
+    CONTIGS_FILE="$SAMPLE_PATH/${sample}contigs.fasta"
+
+    echo "Processing sample: $sample"
+
+    # Run PlasmidFinder
+    plasmidfinder.py -i $CONTIGS_FILE -o $OUTPUT_DIR/${sample}_plasmidfinder
+
+    # Run AMRFinderPlus
+    amrfinder -n $CONTIGS_FILE -o $OUTPUT_DIR/${sample}_amrfinder.tsv
+done
+
+echo "Processing complete!"
+
+Escherichia
+
+########
+#!/bin/bash
+# Set the input directory
+INPUT_DIR="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/Nile_perch_aquatic/fastq_output"
+
+# Output directory for results
+OUTPUT_DIR="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/analysis_results"
+mkdir -p $OUTPUT_DIR
+
+# Define the organism for AMRFinderPlus
+ORGANISM="Escherichia"
+
+# Loop through each sample directory
+for sample in $(ls $INPUT_DIR | grep "spades"); do
+    SAMPLE_PATH="$INPUT_DIR/$sample"
+    CONTIGS_FILE="$SAMPLE_PATH/${sample}contigs.fasta"
+
+    echo "Processing sample: $sample"
+
+    # Run PlasmidFinder
+    plasmidfinder.py -i $CONTIGS_FILE -o $OUTPUT_DIR/${sample}_plasmidfinder
+
+    # Run AMRFinderPlus with --organism
+    amrfinder -n $CONTIGS_FILE -o $OUTPUT_DIR/${sample}_amrfinder.tsv --organism "$ORGANISM"
+done
+
+echo "Processing complete!"
+
+
+
+###########
+
+def load_amrfinder_results():
+    data = []
+    for file in os.listdir(INPUT_DIR):
+        if file.endswith(AMRFINDER_SUFFIX):
+            sample = file.replace(AMRFINDER_SUFFIX, "")
+            file_path = os.path.join(INPUT_DIR, file)
+            df = pd.read_csv(file_path, sep="\t", usecols=[" Contig id ", "Class"])
+            df["Sample"] = sample
+            data.append(df)
+    return pd.concat(data) if data else None
+
+
+#####################
+####################
+# Load required libraries
+library(ggtree)
+library(ggplot2)
+library(ape)
+
+# Define hierarchical relationships: Source > Antibiotic Class > ARG Elements
+arg_hierarchy <- list(
+  "Environment and Fish" = list(
+    "AMINOGLYCOSIDE" = c("aac(3)-IId", "aac(3)-IIe", "aph(3'')-Ib", "aph(6)-Id", "aadA1", "aadA5"),
+    "BETA-LACTAM" = c("blaTEMp_C32T", "blaTEM-1", "blaSHV-11", "blaSHV-1", "blaTEM", "blaOXA", "blaOXA-301", 
+                      "blaCTX-M-15", "blaOXA-1", "blaCMY", "blaCTX-M-55"),
+    "QUINOLONE" = c("qnrS1", "qnrB1", "qnrB48", "gyrA_D87N", "gyrA_S83L", "parC_E84V", "parC_S80I", 
+                    "parE_I529L", "gyrA_S83A", "parE_I355T"),
+    "STREPTOTHRICIN" = c("sat2"),
+    "SULFONAMIDE" = c("sul2"),
+    "TETRACYCLINE" = c("tet(A)", "tet(D)")
+  ),
+  "Human" = list(
+    "AMINOGLYCOSIDE" = c("aac(6')-Ie/aph(2'')-Ia", "aac(3)-IIe", "aac(3)-IId", "aac(3)-Ia", "ant(2'')-Ia", 
+                         "aph(3')-Ia", "aadA5", "aadA2", "aadA1", "aph(3'')-Ib", "aph(6)-Id"),
+    "BETA-LACTAM" = c("blaTEMp_C32T", "blaTEMp_G162T", "ftsI_N337NYRIN", "ftsI_I336IKYRI", "blaTEM-1", "blaI", 
+                      "blaTEM-190", "blaOXA", "blaZ", "blaR1", "blaNDM-5", "blaCTX-M-15", "blaOXA-1", "blaCTX-M-27", 
+                      "blaOXA-10", "blaCMY-42", "blaOXA-1181", "blaDHA-1", "mecA"),
+    "QUINOLONE" = c("gyrA_D87N", "gyrA_S83L", "parC_S80I", "parE_S458A", "parC_E84G", "parE_L416F", "qepA4", 
+                    "parC_E84V", "parE_I529L", "parE_E460D", "qnrS1", "qnrS", "qnrB4"),
+    "STREPTOTHRICIN" = c("sat2"),
+    "SULFONAMIDE" = c("sul1"),
+    "TETRACYCLINE" = c("tet(B)", "tet(A)", "tet(38)", "tet(K)")
+  ),
+  "Nile_perch" = list(
+    "AMINOGLYCOSIDE" = c("aac(3)-IId", "aadA1", "aph(3'')-Ib", "aph(6)-Id", "aadA2"),
+    "BETA-LACTAM" = c("blaTEM-1", "blaCTX-M-15"),
+    "QUINOLONE" = c("gyrA_S83L", "parE_S458A", "parC_S80I", "gyrA_D87N", "qepA4", "parC_E84K", "parE_L416F"),
+    "STREPTOTHRICIN" = c("sat2"),
+    "SULFONAMIDE" = c("sul2", "sul1"),
+    "TETRACYCLINE" = c("tet(B)", "tet(D)")
+  ),
+  "Livestock_Kenya" = list(
+    "AMINOGLYCOSIDE" = c("aph(3')-Ia", "aadA1", "aph(6)-Id", "aph(3'')-Ib", "aadA5", "aadA2"),
+    "BETA-LACTAM" = c("blaTEMp_C32T", "blaTEM-1", "blaOXA-1"),
+    "QUINOLONE" = c("qnrS1", "parC_S80I", "gyrA_S83L", "gyrA_D87Y", "gyrA_D87N", "parE_S458T", "qepA4"),
+    "STREPTOTHRICIN" = c("sat2"),
+    "SULFONAMIDE" = c("sul1", "sul2"),
+    "TETRACYCLINE" = c("tet(A)", "tet(B)")
+  ),
+  "Livestock" = list(
+    "AMINOGLYCOSIDE" = c("aac(3)-IId", "aac(3)-IIe", "aph(6)-Id", "aph(3'')-Ib", "aadA5"),
+    "BETA-LACTAM" = c("blaTEM-1", "blaCTX-M-15", "blaOXA-1"),
+    "QUINOLONE" = c("qnrS1", "gyrA_D87N", "gyrA_S83L", "parC_S80I", "parE_S458A"),
+    "SULFONAMIDE" = c("sul1", "sul2"),
+    "TETRACYCLINE" = c("tet(A)", "tet(B)")
+  )
+)
+
+# Function to create a Newick format tree from nested list
+create_newick <- function(data) {
+  if (is.list(data)) {
+    children <- sapply(names(data), function(name) paste0(create_newick(data[[name]]), name))
+    return(paste0("(", paste(children, collapse = ","), ")"))
+  } else {
+    return(paste(data, collapse = ","))
+  }
+}
+
+# Generate Newick format tree
+newick_string <- paste0(create_newick(arg_hierarchy), ";")
+
+# Convert to phylogenetic tree
+tree <- read.tree(text = newick_string)
+
+# Plot circular cladogram
+ggtree(tree, layout = "circular") +
+  geom_tiplab(size = 3, aes(angle = angle)) +
+  ggtitle("ARG Cladogram - Hosts from Tanzania & Kenya") +
+  theme_minimal()
+
+
+
+###########
+  for subdir, _, files in os.walk(root_dir):
+        if "results.json" in files:  # Check if results.json exists in the folder
+            json_path = os.path.join(subdir, "data.json")
+            sample_name = os.path.basename(subdir)
+
+
+ Define the root directory where all sample folders are stored
+root_dir = "/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output/plasmidfinder_output"  # Change this path
+
+
+####################
+###################### 16 Feb 2025
+#!/bin/bash
+
+# Base directory containing SPAdes outputs
+base_dir="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output"
+
+# Output directory for PlasmidFinder results
+output_dir="$base_dir/plasmidfinder_output2_3"
+mkdir -p "$output_dir"
+
+# Loop through subdirectories and find contigs.fasta
+find "$base_dir" -type f -name "contigs.fasta" | while read fasta_file; do
+    # Extract sample name and subdirectory
+    sample_name=$(basename "$(dirname "$fasta_file")")
+    sample_output="$output_dir/${sample_name}"
+    mkdir -p "$sample_output"
+
+    echo "Running PlasmidFinder on $sample_name"
+
+    # Run PlasmidFinder with sudo and enforce output formats
+    sudo docker run -v "$base_dir":/data genomicepidemiology/plasmidfinder \
+        -i /data/"${fasta_file#"$base_dir/"}" \
+        -o /data/"${sample_output#"$base_dir/"}" \
+        --format txt,tsv,json
+done
+
+echo "✅ PlasmidFinder analysis completed."
+
+#######################
+###########################  UPDATED CODES TO extract information from data.json
+#!/bin/bash
+
+# Input JSON file
+input_file="data.json"
+output_file="plasmid_info.csv"
+
+# Extract sample_id from the filename
+sample_id=$(jq -r '.plasmidfinder.user_input."filename(s)"[0]' "$input_file" | awk -F'/' '{print $(NF-1)}')
+
+# Create CSV header
+echo -e "plasmid_name\tsample_id\tplasmid_position_in_contig\tcontig_name" > "$output_file"
+
+# Extract plasmid information
+jq -r --arg sample_id "$sample_id" '
+  .plasmidfinder.results."Enterobacteriaceae".enterobacteriaceae |
+  to_entries[] |
+  "\(.value.plasmid)\t" + $sample_id + "\t\(.value.positions_in_contig)\t\(.value.contig_name)"
+' "$input_file" >> "$output_file"
+
+echo "Extraction completed. Data saved to $output_file"
+
+
+###for many files
+#!/bin/bash
+
+# Set output CSV file
+output_file="plasmid_info.csv"
+
+# Create CSV header
+echo -e "plasmid_name\tsample_id\tplasmid_position_in_contig\tcontig_name" > "$output_file"
+
+# Base directory containing plasmidfinder output
+base_dir="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/fish_soil/fastq_output/plasmidfinder_output"
+
+# Find all data.json files in sample subdirectories
+find "$base_dir" -type f -name "data.json" | while read -r json_file; do
+    # Extract sample_id from the directory name (e.g., ERR13420701)
+    sample_id=$(basename "$(dirname "$json_file")")
+
+    # Extract plasmid information and append to output file
+    jq -r --arg sample_id "$sample_id" '
+      .plasmidfinder.results."Enterobacteriaceae".enterobacteriaceae |
+      to_entries[] |
+      "\(.value.plasmid)\t" + $sample_id + "\t\(.value.positions_in_contig)\t\(.value.contig_name)"
+    ' "$json_file" >> "$output_file"
+done
+
+echo "Extraction completed. Data saved to $output_file"
+
+
+
+
+
+###################
+import os
+import json
+from Bio import SeqIO
+
+# Define the directories
+json_directory = "/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output/plasmidfinder_output22"
+contig_directory = "/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output"
+output_directory = "/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output/plasmidfinder_output22"  # Update this path for your output files
+
+# Function to extract plasmid sequence from contig
+def extract_plasmid_sequence(contig_file, plasmid_start, plasmid_end):
+    # Read the contig file
+    for record in SeqIO.parse(contig_file, "fasta"):
+        # Extract the plasmid sequence from the contig
+        plasmid_sequence = record.seq[plasmid_start:plasmid_end]
+        return plasmid_sequence
+    return None
+
+# Process each JSON file in the plasmidfinder output directory
+for json_file in os.listdir(json_directory):
+    if json_file.endswith(".json"):
+        json_file_path = os.path.join(json_directory, json_file)
+        
+        # Load the plasmidfinder results
+        with open(json_file_path, 'r') as f:
+            plasmid_data = json.load(f)
+        
+        # Iterate through the plasmid information in the results
+        for plasmid in plasmid_data.get('plasmidfinder.results', {}).values():
+            for plasmid_info in plasmid.values():
+                # Extract plasmid position (assuming 'positions_in_contig' field)
+                contig_name = plasmid_info.get('contig_name')
+                plasmid_start = int(plasmid_info.get('positions_in_contig', "").split("..")[0])
+                plasmid_end = int(plasmid_info.get('positions_in_contig', "").split("..")[1])
+                
+                # Find the corresponding contig file
+                contig_file_path = None
+                for subdir in os.listdir(contig_directory):
+                    if subdir.endswith("_spades"):
+                        potential_contig_file = os.path.join(contig_directory, subdir, "contigs.fasta")
+                        if os.path.exists(potential_contig_file):
+                            contig_file_path = potential_contig_file
+                            break
+                
+                if contig_file_path:
+                    # Extract the plasmid sequence from the contig
+                    plasmid_sequence = extract_plasmid_sequence(contig_file_path, plasmid_start, plasmid_end)
+                    
+                    if plasmid_sequence:
+                        # Save the plasmid sequence to a FASTA file
+                        output_fasta_path = os.path.join(output_directory, f"{contig_name}_{json_file}.fasta")
+                        with open(output_fasta_path, 'w') as output_fasta:
+                            output_fasta.write(f">{contig_name}_plasmid\n")
+                            output_fasta.write(str(plasmid_sequence))
+                        print(f"Plasmid sequence for {contig_name} saved as {output_fasta_path}")
+                    else:
+                        print(f"Plasmid sequence for {contig_name} not found.")
+
+
+
+
+path to contigs.fasta :/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output subdirectories end with _spades
+path to data.json : /media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output/plasmidfinder_output22  then subdirectories end with _spades
+
+#############################
+#############################
+############################
+#!/bin/bash
+
+# Base directory where the subdirectories end with "_spades"
+base_directory="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_Human_kcri/fastq_output/plasmidfinder_output"
+# Path for the CSV output
+csv_file_path="plasmid_positions_new.csv"
+
+# Initialize CSV file with headers
+echo "subdirectory,plasmid_name,plasmid_position_in_contig,contig_name,extracted_fasta" > "$csv_file_path"
+
+# Loop through each subdirectory ending with "_spades"
+for subdir in "$base_directory"/*_spades; do
+    if [ -d "$subdir" ]; then
+        json_file="$subdir/data.json"
+        
+        # Check if the JSON file exists
+        if [ -f "$json_file" ]; then
+            # Check if the JSON file contains the string "No hit found"
+            if grep -q '"No hit found"' "$json_file"; then
+                echo "No hit found in $json_file, skipping..."
+                continue  # Skip this file
+            fi
+            
+            # Check if the JSON file is valid
+            if jq empty "$json_file" >/dev/null 2>&1; then
+                # Extract plasmid data from the JSON file using jq
+                jq -r '
+                    .plasmidfinder.results.Enterobacteriaceae.enterobacteriaceae | 
+                    to_entries[] | 
+                    [
+                        "'$subdir'",
+                        .key,
+                        .value.positions_in_contig,
+                        .value.contig_name
+                    ] | 
+                    @csv' "$json_file" | while IFS=, read -r subdirectory plasmid_name plasmid_position_in_contig contig_name; do
+                    
+                    # Extract start and end positions from positions_in_contig
+                    start_position=$(echo "$plasmid_position_in_contig" | cut -d'.' -f1 | cut -d'..' -f1)
+                    end_position=$(echo "$plasmid_position_in_contig" | cut -d'.' -f1 | cut -d'..' -f2)
+
+                    # Extract the sequence from the contig using seqtk
+                    contig_file="$subdirectory/$contig_name"  # Full path to the contig file
+                    fasta_output="$subdirectory/${plasmid_name}_plasmid_sequence.fasta"
+                    
+                    # Check if contig file exists
+                    if [ -f "$contig_file" ]; then
+                        echo "Extracting plasmid $plasmid_name from $contig_name at positions $start_position..$end_position"
+                        seqtk subseq "$contig_file" <(echo -e "$start_position-$end_position") > "$fasta_output"
+                        extracted_fasta="$fasta_output"
+                    else
+                        echo "Contig file not found: $contig_file"
+                        extracted_fasta="Contig file not found"
+                    fi
+                    
+                    # Append plasmid info to CSV including the extracted FASTA file path
+                    echo "$subdirectory,$plasmid_name,$plasmid_position_in_contig,$contig_name,$extracted_fasta" >> "$csv_file_path"
+                done
+            else
+                echo "Invalid JSON in $json_file"
+            fi
+        else
+            echo "JSON file not found in $subdir"
+        fi
+    fi
+done
+
+echo "Plasmid positions and sequences have been saved to $csv_file_path"
+
+##########################
+##########################
+from Bio import SeqIO
+
+def extract_plasmid_sequence(contig_file, plasmid_position):
+    # Parse the plasmid position (e.g., 1754..2015)
+    start_pos, end_pos = map(int, plasmid_position.split('..'))
+
+    # Read the contig file (FASTA format)
+    for record in SeqIO.parse(contig_file, "fasta"):
+        # Extract the sequence for the given range
+        plasmid_seq = record.seq[start_pos-1:end_pos]  # Adjust for zero-indexing
+        return plasmid_seq
+
+# Example usage
+contig_sub_directory = '/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output/ERR3330248_spades/'
+plasmid_position = '1754..2015'  # Example plasmid position
+contig_name = 'NODE_49_length_28212_cov_83.681749'
+
+# Define the path to the contig file
+contig_file = f"{contig_sub_directory}{contig_name}.fasta"
+
+# Extract the plasmid sequence
+plasmid_sequence = extract_plasmid_sequence(contig_file, plasmid_position)
+print(plasmid_sequence)
+
+###########
+#!/bin/bash
+
+# Define the path to the root directory containing sample subdirectories and the CSV file
+root_dir="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output/"
+csv_file="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output/plasmid_inf.csv"
+
+# Define the output file to save the results
+output_file="plasmid_sequences.txt"
+
+# Initialize or clear the output file
+echo "sample_id, contig_name, plasmid_position, plasmid_sequence" > $output_file
+
+# Read the CSV file line by line
+while IFS=',' read -r sample_id plasmid_position; do
+    # Skip the header row
+    if [[ "$sample_id" == "sample_id" ]]; then
+        continue
+    fi
+
+    # Define the sample directory path
+    sample_dir="${root_dir}${sample_id}"
+
+    # Check if the sample directory exists
+    if [[ ! -d "$sample_dir" ]]; then
+        echo "Sample directory $sample_dir not found, skipping."
+        continue
+    fi
+
+    # Parse the plasmid position (e.g., 1754..2015) into start and end positions
+    start_pos=$(echo $plasmid_position | cut -d'..' -f1)
+    end_pos=$(echo $plasmid_position | cut -d'..' -f2)
+
+
+
+##################
+#!/bin/bash
+
+# Input CSV file
+input_file="plasmid_inf.csv"
+
+# Root directory where sample subdirectories are located
+root_dir="/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/raw_kenya/fastq_output"
+
+# Output directory for extracted plasmids
+output_dir="./extracted_plasmids"
+mkdir -p "$output_dir"
+
+# Process CSV: skip header and read each line
+tail -n +2 "$input_file" | while IFS=, read -r sample_id plasmid_position_in_contig contig_name; do
+    # Strip leading/trailing whitespace
+    sample_id=$(echo "$sample_id" | xargs)
+    plasmid_position_in_contig=$(echo "$plasmid_position_in_contig" | xargs)
+    contig_name=$(echo "$contig_name" | xargs)
+
+    # Construct the correct path to the contig file
+    contig_file="${root_dir}/${sample_id}_spades/contigs.fasta"
+
+    # Verify contig file exists
+    #if [[ ! -f "$contig_file" ]]; then
+    #    echo "Contig file not found: $contig_file"
+    #    continue
+    #fi
+
+    # Convert position from 47..160 to 47-160 (change .. to -)
+    position=$(echo "$plasmid_position_in_contig" | sed 's/\.\./-/')
+
+    # Extract the part of the contig name that corresponds to NODE (e.g., NODE_336)
+    node_name=$(echo "$contig_name" | sed 's/\(NODE_[0-9]*\).*/\1/')
+
+    # Define the output file name in the format you provided: contigs.fasta NODE_name:position.fasta
+    output_file="${output_dir}/contigs.fasta ${node_name}:${position}.fasta"
+
+    # Extract plasmid sequence using samtools
+    samtools faidx "$contig_file" "${contig_name}:${position}" > "$output_file"
+
+    echo "Extracted: $output_file"
+done
+
+    # Loop over the contig files in the sample directory
+    for contig_file in "$sample_dir"/*.fasta; do
+        # Extract the contig name from the filename (e.g., NODE_49_length_28212_cov_83.681749)
+        contig_name=$(basename "$contig_file" .fasta)
+
+        # Extract the plasmid sequence using `samtools faidx` or other tools
+        plasmid_sequence=$(samtools faidx $contig_file $contig_name:$start_pos-$end_pos | tail -n +2)
+
+        # Save the result to the output file
+        echo "$sample_id, $contig_name, $plasmid_position, $plasmid_sequence" >> $output_file
+    done
+done < $csv_file
+
+echo "Plasmid sequences have been extracted and saved to $output_file"
+
+
+
+###############generate a circular plasmid 
+
+import pandas as pd
+import networkx as nx
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+from matplotlib.colors import Normalize
+
+# Load the CSV file
+file_path = '/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/plasmid_analysis/plasmid_positions.csv'
+df = pd.read_csv(file_path)
+
+# Initialize a graph
+G = nx.Graph()
+
+# Collect all unique sources
+sources = df['source'].unique()
+
+# Add nodes and edges with source tracking
+for source in sources:
+    plasmids_in_source = df[df['source'] == source]['plasmid_name'].unique()
+
+    for plasmid in plasmids_in_source:
+        if not G.has_node(plasmid):
+            G.add_node(plasmid, sources=set())
+        G.nodes[plasmid]['sources'].add(source)
+
+    for i in range(len(plasmids_in_source)):
+        for j in range(i + 1, len(plasmids_in_source)):
+            if not G.has_edge(plasmids_in_source[i], plasmids_in_source[j]):
+                G.add_edge(plasmids_in_source[i], plasmids_in_source[j], source=set())
+            G.edges[plasmids_in_source[i], plasmids_in_source[j]]['source'].add(source)
+
+# Map node colors by the number of unique sources
+node_colors = [len(data['sources']) for _, data in G.nodes(data=True)]
+
+# Set up the color map
+cmap = cm.get_cmap("plasma")
+norm = Normalize(vmin=min(node_colors), vmax=max(node_colors))
+
+# Draw the network
+plt.figure(figsize=(12, 12))
+pos = nx.spring_layout(G, seed=42)
+nx.draw(G, pos, with_labels=True, node_size=700, node_color=node_colors, cmap=cmap, edge_color='gray')
+
+# Add colorbar
+sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
+sm.set_array([])
+cbar = plt.colorbar(sm, ax=plt.gca(), orientation='vertical')
+cbar.set_label('Number of Sources')
+
+plt.title('Plasmid Co-occurrence Network Colored by Source Count')
+plt.show()
+
+
+################## GRANTINA
+
+scp blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_data/*.gz .
