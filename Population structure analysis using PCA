@@ -1,0 +1,155 @@
+#title: "Population structure analysis using PCA"
+author: "Beatus Lyimo"
+Updated: '2025-Feb-03'
+
+
+### Introduction 
+
+#Population genomic or genetic is the study of the frequency, distribution of alleles in populations and change in allele frequencies in the populations (Smouse 1990). It also addresses the genetic variation within and among populations and the evolutionary and other factors that explain the variations (Casillas and Barbadilla 2017). 
+
+#
+
+### Part I - Importing your VCF file and checking missigness and MAF 
+
+
+
+#If the data is not good, you have to do more filtering before downstream analysis.  
+
+#For the training purpose we are using filtered high quality data set. 
+
+
+##  Please install the R packages first
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#install.packages("BiocManager")
+#BiocManager::install("gdsfmt")
+BiocManager::install("SNPRelate")
+#install.packages("SNPRelate", dependencies=TRUE)
+
+#Load the library
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+#BiocManager::install("ComplexHeatmap")
+#BiocManager::install("FactoClass")
+#BiocManager::install("gplots")
+BiocManager::install("tidyverse")
+
+library(gdsfmt)
+library(SNPRelate)
+library(FactoClass)
+library(scatterplot3d)
+library(ComplexHeatmap)
+library(RColorBrewer)
+library(gplots)
+library(ggplot2)
+library(vcfR)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+
+
+getwd() # To check the current dir
+
+setwd("/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/all_vcf_files/pca_analysis")
+
+#VCF files
+
+#read in the VCF file with vcfR and check the file
+
+vcf <- read.vcfR( file = "merge_all_pass.vcf.gz", verbose = FALSE )
+
+# vcf Summarization and check metadata
+
+head(vcf) 
+
+# If you needed you can Subset samples
+#vcf[,1:10]
+
+merge_vcf.fn <- "merge_all_pass.vcf.gz"
+
+# Reformat (change vcf to gds file )
+
+snpgdsVCF2GDS(merge_vcf.fn, "merge_all_vcf.fn.gds", method="biallelic.only")
+
+# Summary
+snpgdsSummary("merge_all_vcf.fn.gds")
+
+genofile_all <- snpgdsOpen("merge_all_vcf.fn.gds")
+
+## get sample id and SNP id
+
+sample.id2 <- read.gdsn(index.gdsn(genofile_all, "sample.id"))
+
+sample_id_all2 <- read.delim("all_updated_sample_ids.tsv")
+
+
+write.csv(sample_id_all, "updated_metadata_pca.tsv")
+
+snp.id <- read.gdsn(index.gdsn(genofile_all, "snp.id"))
+
+View(snp.id)
+# calculate sample missingness rate - checks samples containing not calls across the genome
+
+samplemissr <- snpgdsSampMissRate(genofile_all, sample.id=sample.id, snp.id=snp.id, with.id=FALSE)
+
+write.csv(samplemissr,"sample_missingness_tanzaniasamples.csv")
+
+
+hist(samplemissr, breaks= 30,xlim= c(0, 1), col="grey",   xlab="Missingness",
+     main= "Sample Missingness")
+
+
+# calculate SNP missigness rate - checks individual missingness rate across samples
+SNPmissrate<-snpgdsSNPRateFreq(genofile_all, sample.id=sample.id, snp.id=snp.id, with.id=FALSE,
+                               with.sample.id=FALSE, with.snp.id=FALSE)
+
+
+hist(SNPmissrate$MissingRate, breaks= 20, col="grey",   xlab="Missingness", main= "SNP Missingness")
+
+
+#Minor allele frequency-MAF
+
+MAF<-SNPmissrate$MinorFreq
+
+
+hist(MAF, breaks= 15, col="grey",   ylab= "Frequency", xlab="MAF", main= "Minor Alelle frequency")
+
+# MAF in categorical format 
+
+MAF_categorical<-cut(SNPmissrate$MinorFreq, br=c(0.00, 0.01, 0.02, 0.03, 0.04,0.05,0.1, 0.20,0.30, 0.40,0.50))
+
+
+plot(MAF_categorical, col="grey",   ylab= "Frequency", xlab="MAF", main= "Minor Alelle frequency")
+
+# Define top 4 Eigenvectors 
+EV1 = eigenvect2[,1]    # the first eigenvector
+EV2 = eigenvect2[,2]    # the second eigenvector
+EV3 = eigenvect2[,3]    # the 3rd eigenvector
+EV4 = eigenvect2[,4]    # the 4th eigenvector
+
+#Define all variables 
+
+location<- getElement(sample_id_all2, 'location' )
+
+sample1.id<- getElement(all_pca, 'sample_id_all2' )
+
+sample2.id<- getElement(all_pca, 'sample_id_all2' )
+
+## Get a list of country following the order of the sample IDs and plot pca1 and 2
+pop = factor(location)[match(sample1.id, sample2.id)]
+
+pop
+dim(pop)
+View(pop)
+tab1_1 <- data.frame(sample1.id, EV1, EV2, stringsAsFactors = FALSE)
+tab1_1
+write.table(tab, file=paste(name,'-PCA1_2.tsv', sep=""), 
+            quote = F, row.names = F, sep="\t")
+head(tab1_1)
+
+plot(tab1_1$EV1, tab1_1$EV2, xlab="PC1", ylab="PC2", col=col.list[as.integer(pop)], pch=1,cex=1)
+legend("topright", legend=levels(pop), bg="transparent",pch=19, cex=1.7,col=col.list,text.col=col.list)
+
+
+                                                                                                                                                                                                                                                                                                                                                              ```
+                                                                                                                                                                                                                                                                                                                                                                                                           
