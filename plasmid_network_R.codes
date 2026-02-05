@@ -1,0 +1,947 @@
+setwd("/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/plasmid_analysis")
+# Load the libraries
+library(ape)
+library(vcfR)
+library(pheatmap)
+library(RColorBrewer)
+library(tidyverse)
+library(ggVennDiagram)
+library(igraph)
+
+#############
+
+####plasmid network analysis
+
+#input_file <- "plasmid_positions.csv"  # Plasmid names and sources
+
+
+
+
+input_data_kenya <- read.csv("plasmid_positions_kenya.csv", stringsAsFactors = FALSE)
+input_data_nile_perch <- read.csv("plasmid_info_nile_perch.csv")
+input_data_human <- read.csv("plasmid_info_human.csv")
+input_data_livestock_tz <- read.csv("plasmid_info_livestock.csv")
+input_data_fish_envo <- read.csv("plasmid_info_fish_envi.csv")
+###### merge the 4 files
+merged_df_all_plasmid <- rbind(input_data_nile_perch, input_data_human, input_data_livestock_tz,input_data_fish_envo )
+
+
+
+# Load the igraph library
+library(igraph)
+
+# Input files
+input_data_kenya <- read.csv("plasmid_positions_kenya.csv", stringsAsFactors = FALSE)
+input_data_nile_perch <- read.csv("plasmid_info_nile_perch.csv")
+input_data_human <- read.csv("plasmid_info_human.csv")
+input_data_livestock_tz <- read.csv("plasmid_info_livestock.csv")
+input_data_fish_envo <- read.csv("plasmid_info_fish_envi.csv")
+
+###### merge the 4 files
+merged_df_all_plasmid <- rbind(input_data_nile_perch, input_data_human, input_data_livestock_tz,input_data_fish_envo )
+# Open the file for appending
+node_file_conn <- file(node_file, open = "a")
+edge_file_conn <- file(edge_file, open = "a")
+
+# Process each plasmid and create nodes and edges
+for (i in 1:nrow(merged_df_all_plasmid)) {
+  plasmid_name <- merged_df_all_plasmid$plasmid_name[i]
+  source <- merged_df_all_plasmid$source[i]
+  
+  # Print plasmid details
+  message("Plasmid: ", plasmid_name, ", Source: ", source)
+  
+  # Add node (plasmid) with source
+  writeLines(paste(plasmid_name, source, sep = ","), node_file_conn)
+  
+  # Create edges between plasmids with matching names, irrespective of source
+  shared_plasmids <- merged_df_all_plasmid[merged_df_all_plasmid$plasmid_name == plasmid_name, ]
+  
+  for (j in 1:nrow(shared_plasmids)) {
+    other_plasmid <- shared_plasmids$plasmid_name[j]
+    other_source <- shared_plasmids$source[j]
+    
+    # Ensure no self-edges
+    if (plasmid_name != other_plasmid || source != other_source) {
+      writeLines(paste(plasmid_name, other_plasmid, source, other_source, sep = ","), edge_file_conn)
+    }
+  }
+}
+
+# Close the file connections
+close(node_file_conn)
+close(edge_file_conn)
+
+# Remove duplicate edges
+edge_lines <- readLines(edge_file)
+unique_edges <- unique(edge_lines)
+writeLines(unique_edges, edge_file)
+
+# Read nodes and edges data
+nodes <- read.csv(node_file, header = FALSE, stringsAsFactors = FALSE)
+edges <- read.csv(edge_file, header = FALSE, stringsAsFactors = FALSE)
+
+# Create a graph from the edges
+graph <- graph_from_edgelist(as.matrix(edges[, c(1, 2)]), directed = FALSE)
+
+head(nodes)
+head(edges)
+
+nodes$V1 <- trimws(tolower(nodes$V1))  # Convert to lowercase and remove extra spaces
+edges$V1 <- trimws(tolower(edges$V1))  # Same for the first column of edges
+edges$V2 <- trimws(tolower(edges$V2))
+graph <- graph_from_edgelist(as.matrix(edges[, c(1, 2)]), directed = FALSE)
+
+vertex_names <- V(graph)$name
+node_names <- nodes$V1
+#########
+if (all(node_names %in% vertex_names)) {
+  message("Plasmid names match graph vertices!")
+  # Assign the source to each vertex based on cleaned node names
+  V(graph)$source <- nodes$V2
+} else {
+  message("Plasmid names still do not match graph vertices.")
+  # Identify mismatched plasmid names
+  mismatched <- setdiff(node_names, vertex_names)
+  print(mismatched)
+}
+
+
+# Define colors for each source type
+source_colors <- c("nile_perch" = "lightblue", "livestock" = "lightgreen", "human" = "lightcoral", "environment" = "lightyellow")
+
+# Assign colors to nodes based on their source
+node_colors <- source_colors[V(graph)$source]
+
+# Plot the network with coloring by source
+plot(graph,
+     vertex.size = 30,               # Node size
+     vertex.label.cex = 0.8,         # Label size
+     vertex.label.color = "black",   # Label color
+     vertex.color = node_colors,     # Node color based on source
+     edge.color = "gray",            # Edge color
+     edge.width = 1,                 # Edge width
+     main = "Plasmid Network Plot by Source")   # Title
+
+
+# Extract plasmid names from nodes
+node_names <- nodes$V1  # assuming plasmid names are in the first column
+
+vertex_names <- V(graph)$name
+if (all(node_names %in% vertex_names)) {
+  # Assign the source to each vertex based on node names
+  V(graph)$source <- nodes$V2
+} else {
+  message("Plasmid names do not match the graph vertices.")
+}
+
+
+
+# Add node attributes (source)
+V(graph)$source <- nodes$V2
+
+# Define colors for each source type
+source_colors <- c("nile_perch" = "lightblue", "livestock" = "lightgreen", "human" = "lightcoral", "environment" = "lightyellow")
+
+# Assign colors to nodes based on their source
+node_colors <- source_colors[V(graph)$source]
+
+# Plot the network with coloring by source
+plot(graph,
+     vertex.size = 30,               # Node size
+     vertex.label.cex = 0.8,         # Label size
+     vertex.label.color = "black",   # Label color
+     vertex.color = node_colors,     # Node color based on source
+     edge.color = "gray",            # Edge color
+     edge.width = 1,                 # Edge width
+     main = "Plasmid Network Plot by Source")   # Title
+
+#######################
+plasmid_counts <- merged_df_all_plasmid %>%
+  group_by(plasmid_name, source) %>%
+  summarise(prevalence = n(), .groups = "drop")
+write.csv(plasmid_counts, "plasmid_counts.csv")
+##
+# Step 3: Create a box plot to visualize prevalence
+ggplot(plasmid_counts, aes(x = source, y = prevalence, fill = source)) +
+  geom_boxplot(outlier.color = "red", outlier.size = 2) +
+  theme_minimal() +
+  labs(title = "Prevalence of Plasmids by Source",
+       x = "Source",
+       y = "Plasmid Prevalence") +
+  scale_fill_manual(values = c("nile_perch" = "lightblue",
+                               "livestock" = "lightgreen",
+                               "human" = "lightcoral",
+                               "environment" = "lightyellow")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+#################
+ggplot(plasmid_counts, aes(x = source, y = prevalence, fill = source)) +
+  geom_boxplot(outlier.color = "red", outlier.size = 2, alpha = 0.7) +
+  geom_jitter(shape = 16, position = position_jitter(0.2), color = "black") +
+  theme_minimal() +
+  labs(title = "Prevalence of Plasmids by Source",
+       x = "Source",
+       y = "Plasmid Prevalence")
+
+################
+# Step 2: If plasmid_type doesn't exist, extract from plasmid_name using pattern matching
+merged_df_all_plasmid <- merged_df_all_plasmid %>%
+  mutate(plasmid_type = sub("\\(.*\\)", "", plasmid_name))  # Extracts text before parentheses
+
+# Step 3: Summarize prevalence of plasmids by source and type
+plasmid_counts <- merged_df_all_plasmid %>%
+  group_by(plasmid_name, source, plasmid_type) %>%
+  summarise(prevalence = n(), .groups = "drop")
+
+# Step 4: Create a faceted box plot by plasmid_type
+ggplot(plasmid_counts, aes(x = source, y = prevalence, fill = source)) +
+  geom_boxplot(outlier.color = "red", outlier.size = 2) +
+  theme_minimal() +
+  labs(title = "Prevalence of Plasmids by Source and Type",
+       x = "Source",
+       y = "Plasmid Prevalence") +
+  scale_fill_manual(values = c("nile_perch" = "lightblue",
+                               "livestock" = "lightgreen",
+                               "human" = "lightcoral",
+                               "environment" = "lightyellow")) +
+  facet_wrap(~ plasmid_type, scales = "free_y") +  # Facet by plasmid_type
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+##################
+# Step 2: Ensure unique plasmids across sources
+shared_plasmids <- merged_df_all_plasmid %>%
+  group_by(plasmid_name) %>%
+  filter(n_distinct(source) > 1) %>%
+  ungroup()
+
+# Step 3: Create nodes (unique plasmid + source combinations)
+nodes <- shared_plasmids %>%
+  mutate(node_id = paste(plasmid_name, source, sep = "_")) %>%
+  select(node_id, plasmid_name, source) %>%
+  distinct()
+
+library(igraph)
+library(tidyverse)
+library(ggraph)
+install.packages("ggraph")
+#############################
+
+# Load required libraries
+library(igraph)
+library(tidyverse)
+library(ggraph)
+
+# Step 1: Load your dataset
+merged_df_all_plasmid <- read.csv("merged_df_all_plasmid.csv", stringsAsFactors = FALSE)
+
+# Step 2: Filter dataset to include only the four relevant sources
+valid_sources <- c("livestock", "human", "environment", "Nile_perch")
+
+filtered_df <- merged_df_all_plasmid %>%
+  filter(source %in% valid_sources)
+
+# Step 3: Identify plasmids shared across multiple sources
+shared_plasmids <- filtered_df %>%
+  group_by(plasmid_name) %>%
+  filter(n_distinct(source) > 1) %>%
+  ungroup()
+
+# Step 4: Create nodes (unique plasmid + source combinations)
+nodes <- shared_plasmids %>%
+  mutate(node_id = paste(plasmid_name, source, sep = "_")) %>%
+  select(node_id, plasmid_name, source) %>%
+  distinct()
+
+# Step 5: Create edges between plasmids that share sources
+edges <- shared_plasmids %>%
+  group_by(plasmid_name) %>%
+  summarise(pairs = list(combn(unique(source), 2, simplify = FALSE)), .groups = "drop") %>%
+  unnest(cols = c(pairs)) %>%
+  mutate(from_source = map_chr(pairs, 1), 
+         to_source = map_chr(pairs, 2)) %>%
+  mutate(from = paste(plasmid_name, from_source, sep = "_"),
+         to = paste(plasmid_name, to_source, sep = "_")) %>%
+  select(from, to) %>%
+  distinct()
+
+# Step 6: Ensure edges align with valid nodes
+edges <- edges %>%
+  filter(from %in% nodes$node_id & to %in% nodes$node_id)
+
+# Step 7: Build the plasmid-sharing network
+plasmid_network <- graph_from_data_frame(edges, vertices = nodes, directed = FALSE)
+
+# Step 8: Assign attributes (e.g., source) to graph vertices
+V(plasmid_network)$source <- nodes$source[match(V(plasmid_network)$name, nodes$node_id)]
+V(plasmid_network)$plasmid_name <- nodes$plasmid_name[match(V(plasmid_network)$name, nodes$node_id)]
+
+# Step 9: Set One Health source colors
+source_colors <- c("livestock" = "#1f78b4",   # Blue
+                   "human" = "#33a02c",       # Green
+                   "environment" = "#ff7f00", # Orange
+                   "nile_perch" = "#e31a1c")  # Red
+
+V(plasmid_network)$color <- source_colors[V(plasmid_network)$source]
+
+# Step 10: Visualize the plasmid-sharing network
+ggraph(plasmid_network, layout = "fr") +
+  geom_edge_link(aes(width = 0.8), color = "gray80", alpha = 0.7) +
+  geom_node_point(aes(color = source), size = 5) +
+  geom_node_text(aes(label = plasmid_name), repel = TRUE, size = 3) +
+  scale_color_manual(values = source_colors) +
+  theme_void() +
+  labs(title = "Plasmid Sharing Network Across One Health Sources",
+       subtitle = "Nodes represent plasmids within a source, edges indicate shared plasmids",
+       color = "Source") +
+  theme(legend.position = "right")
+
+
+
+#####################
+############# alternative
+# Create the graph object
+plasmid_network <- graph_from_data_frame(edges, vertices = nodes, directed = FALSE)
+
+# Plot using ggraph
+ggraph(plasmid_network, layout = 'fr') +  # 'fr' layout is a force-directed layout
+  geom_edge_link(aes(width = 0.8), color = "gray80", alpha = 0.7) +  # Adjust edge width and color
+  geom_node_point(aes(color = source), size = 5) +  # Customize node size and color
+  geom_node_text(aes(label = name), vjust = -1, size = 3) +  # Label the nodes
+  theme_graph() +  # Use a clean theme for the graph
+  theme(legend.position = "none") 
+
+############### Alternative
+# Create the graph object
+plasmid_network <- graph_from_data_frame(edges, vertices = nodes, directed = FALSE)
+
+# Replace "Nile_perch" with "fish" in the source column
+V(plasmid_network)$source <- gsub("Nile_perch", "fish", V(plasmid_network)$source)
+
+# Plot using ggraph
+ggraph(plasmid_network, layout = 'fr') +  # 'fr' layout is a force-directed layout
+  geom_edge_link(aes(width = 0.8), color = "gray80", alpha = 0.7) +  # Adjust edge width and color
+  geom_node_point(aes(color = source), size = 5) +  # Customize node size and color
+  scale_color_manual(values = c("livestock" = "lightblue", "human" = "lightgreen", "fish" = "lightcoral", "environment" = "gray")) +  # Add custom colors
+  theme_graph() +  # Use a clean theme for the graph
+  theme(legend.position = "right") +  # Position the legend
+  theme(legend.title = element_blank(),  # Remove the legend title
+        legend.text = element_text(size = 10))  # Adjust legend text size
+
+
+################################### alternative
+
+# Create the graph object
+plasmid_network <- graph_from_data_frame(edges, vertices = nodes, directed = FALSE)
+
+# Replace "Nile_perch" with "fish" in the source column
+V(plasmid_network)$source <- gsub("Nile_perch", "fish", V(plasmid_network)$source)
+
+# Plot using ggraph
+ggraph(plasmid_network, layout = 'fr') +  # 'fr' layout is a force-directed layout
+  geom_edge_link(aes(width = 0.8), color = "gray80", alpha = 0.7) +  # Adjust edge width and color
+  geom_node_point(aes(color = plasmid_name), size = 5) +  # Customize node size and color by plasmid name
+  geom_node_text(aes(label = plasmid_name), color = "black", size = 3) +  # Add plasmid names as labels
+  scale_color_manual(values = rainbow(length(unique(nodes$plasmid_name)))) +  # Assign a unique color to each plasmid
+  theme_graph() +  # Use a clean theme for the graph
+  theme(legend.position = "none")  # Remove the legend
+
+######################
+
+shared_plasmids$source <- gsub("Nile_perch", "fish", shared_plasmids$source)
+
+# Update source_colors to reflect the change from "Nile_perch" to "fish"
+source_colors <- c("livestock" = "blue", "human" = "lightgreen", "fish" = "lightcoral", "environment" = "black")
+
+# Step 10: Visualize the plasmid-sharing network
+ggraph(plasmid_network, layout = "fr") +
+  geom_edge_link(aes(width = 0.8), color = "gray80", alpha = 0.7) +
+  geom_node_point(aes(color = source), size = 5) +
+  geom_node_text(aes(label = plasmid_name), repel = TRUE, size = 3) +
+  scale_color_manual(values = source_colors) +
+  theme_void() # +
+  #labs(title = "Plasmid Sharing Network Across One Health Sources",
+   #    subtitle = "Nodes represent plasmids within a source, edges indicate shared plasmids",
+    #   color = "Source") +
+#  theme(legend.position = "right")
+
+
+
+###################################
+
+
+
+geom_jitter(shape = 16, position = position_jitter(0.2), color = "black")
+
+facet_wrap(~ plasmid_type, ncol = 3)
+#################
+# Pivot data to wide format (for intersections)
+df_wide <- merged_df_all_plasmid %>%
+  mutate(value = 1) %>%
+  pivot_wider(names_from = source, values_from = value, values_fill = 0)
+
+#################
+library(tidyverse)
+library(ComplexUpset)
+install.packages("ComplexUpset")
+
+
+
+
+######################
+amr_data_all <- read.csv("All_AMR_merged_amr_results_all.csv"), row.names = 1, check.names = FALSE)
+
+# Separate the CombinedElements into individual ARGs
+expanded_data <- amr_data_all %>%
+  separate_rows(Elementsymbol, sep = ", ") %>%
+  distinct()
+
+# Create a list of unique ARGs for each host group
+arg_list <- expanded_data %>%
+  group_by(source) %>%
+  summarise(ARGs = list(unique(Elementsymbol))) %>%
+  deframe()
+
+# Plot the Venn diagram
+ggVennDiagram(arg_list) +
+  scale_fill_gradient(low = "lightblue", high = "darkblue") +
+  theme(legend.position = "none")
+
+
+##### alternative
+# Plot the Venn diagram with enhanced aesthetics
+ggVennDiagram(arg_list, label_alpha = 0) +
+  scale_fill_gradient(low = "lightblue", high = "darkblue") +  # Gradient fill for regions
+  scale_color_manual(values = c("black", "black", "black")) +  # Edge colors
+  theme_void() +  # Clean theme without axes
+  theme(
+    legend.position = "none",  # Remove legend
+    plot.title = element_text(hjust = 0.5, size = 16, face = "bold"),  # Centered and bold title
+    plot.margin = margin(10, 10, 10, 10)  # Adjust plot margins
+  ) +
+  labs(title = "Venn Diagram of ARGs Shared by Host Groups")  # Add a title
+
+
+head(amr_data_beta)
+
+
+
+pheatmap(
+  amr_data_beta,
+  color = colorRampPalette(c("tomato", "blue"))(50),
+  cluster_rows = TRUE,
+  cluster_cols = TRUE,
+  fontsize = 10,
+  main = "AMR Gene Distribution Across Samples"
+)
+
+
+
+#####
+library(dplyr)
+library(ggplot2)
+summary <- amr_data_all %>%
+  group_by(source, Class, Elementsymbol) %>%
+  summarise(Count = n())
+
+####
+summary_2 <- amr_data_all %>%
+  count(source, Class, Elementsymbol, name = "Count")
+###########
+library(dplyr)
+
+# Combine Elementsymbols by source and Class
+combined_data <- amr_data_all %>%
+  group_by(source, Class, Subclass) %>%
+  summarise(CombinedElements = paste(Elementsymbol, collapse = ", "))
+
+write.csv(combined_data, "combined_data_feb_2025_2.csv")
+########
+combined_data_feb_2025_2.csv
+setwd("/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/AMR_analysis")
+
+amr_data_all2 <- read.csv("combined2_data_feb_11__2025.csv"), row.names = 1, check.names = FALSE)
+
+library(ggtree)
+library(ggplot2)
+library(ape)
+################
+###############
+# Load required libraries
+library(ggtree)
+library(ggplot2)
+library(ape)
+library(tidyverse)
+library(igraph)
+library(ggraph)
+
+# Load required libraries
+library(tidyverse)
+library(igraph)
+library(ggraph)
+
+# Step 1: Clean the source names
+amr_data_all2 <- amr_data_all2 %>%
+  mutate(source = case_when(
+    source == "Environment and Fish" ~ "environment",
+    source == "Nile_perch" ~ "fish",
+    TRUE ~ source
+  ))
+
+
+# Step 2: Create edges for ARG-Host relationships (handle single-source cases)
+edges_arg <- amr_data_all2 %>%
+  select(arg_name = CombinedElements, source) %>%
+  separate_rows(arg_name, sep = ";") %>%  # Split multiple ARGs if separated by ";"
+  distinct() %>%
+  group_by(arg_name) %>%
+  summarise(
+    pairs = if (n_distinct(source) > 1) {
+      list(combn(unique(source), 2, simplify = FALSE))
+    } else {
+      list(NULL)  # Handle ARGs present in only one source
+    },
+    .groups = "drop"
+  ) %>%
+  unnest(pairs) %>%
+  filter(!is.null(pairs)) %>%  # Remove NULL pairs
+  mutate(
+    from_source = map_chr(pairs, 1),  # Extract the first element of each pair
+    to_source = map_chr(pairs, 2)     # Extract the second element of each pair
+  ) %>%
+  mutate(
+    from = paste(arg_name, from_source, sep = "_"),
+    to = paste(arg_name, to_source, sep = "_")
+  ) %>%
+  select(from, to) %>%
+  distinct()
+
+# Check the output
+head(edges_arg)
+
+# Step 4: Create nodes for the ARGs and their sources (with source correction)
+unique_names <- unique(c(edges_arg$from, edges_arg$to))
+
+# Clean and standardize source names
+clean_source <- sub(".*_", "", unique_names)
+clean_source <- gsub("livectock_kenya", "livestock", clean_source)
+
+# Create updated nodes dataframe
+nodes_arg <- data.frame(
+  name = unique_names,
+  type = ifelse(grepl("human|livestock|fish|environment", unique_names), "Host", "ARG"),
+  source = clean_source
+)
+
+# Step 5: Define custom colors for each source
+source_colors <- c("livestock" = "lightblue", "human" = "lightgreen", "fish" = "lightcoral", "environment" = "lightyellow")
+
+
+# Verify the fix
+table(nodes_arg$source)  # Check for any remaining typos
+head(nodes_arg)
+
+
+# Step 6: Create the graph object
+arg_network <- graph_from_data_frame(edges_arg, vertices = nodes_arg, directed = FALSE)
+
+# Step 7: Visualize the ARG-Host Sharing Network
+ggraph(arg_network, layout = "fr") +
+  geom_edge_link(aes(width = 0.8), color = "gray80", alpha = 0.7) +
+  geom_node_point(aes(color = source), size = 5) +
+  geom_node_text(aes(label = name), repel = TRUE, size = 3) +
+  scale_color_manual(values = source_colors) +
+  theme_void() +
+  labs(
+    title = "ARG-Host Network Across One Health Sources",
+    subtitle = "Nodes represent ARGs and host sources, edges indicate shared resistance genes",
+    color = "Source"
+  ) +
+  theme(legend.position = "right")
+
+######################
+# Step 1: Clean and standardize the source names
+amr_data_all2 <- amr_data_all2 %>%
+  mutate(source = gsub("livectock_kenya", "livestock", source),
+         source = gsub("Nile_perch", "fish", source),
+         source = gsub("Environment and Fish", "environment", source))
+
+# Step 2: Separate multiple ARGs if combined
+amr_data_clean <- amr_data_all2 %>%
+  select(arg_name = CombinedElements, source) %>%
+  separate_rows(arg_name, sep = ";") %>%
+  distinct()
+
+# Step 3: Create a summary table showing ARGs and the sources where they appear
+arg_sharing_table <- amr_data_clean %>%
+  group_by(arg_name) %>%
+  summarise(Sources = paste(unique(source), collapse = ", "), 
+            Total_Sources = n_distinct(source)) %>%
+  arrange(desc(Total_Sources))
+
+# Step 4: Display the table
+head(arg_sharing_table, 20)  # Show the top 20 shared ARGs
+
+
+
+######
+# Assuming amr_data_all2 is a data frame, let's check its structure
+str(amr_data_all2)
+arg_hierarchy <- list(
+  "Environment and Fish" = list(
+    "AMINOGLYCOSIDE" = c("aac(3)-IId", "aac(3)-IIe", "aph(3'')-Ib", "aph(6)-Id", "aadA1", "aadA5"),
+    "BETA-LACTAM" = c("blaTEMp_C32T", "blaTEM-1", "blaSHV-11", "blaSHV-1", "blaTEM", "blaOXA", "blaOXA-301", 
+                      "blaCTX-M-15", "blaOXA-1", "blaCMY", "blaCTX-M-55"),
+    "QUINOLONE" = c("qnrS1", "qnrB1", "qnrB48", "gyrA_D87N", "gyrA_S83L", "parC_E84V", "parC_S80I", 
+                    "parE_I529L", "gyrA_S83A", "parE_I355T"),
+    "STREPTOTHRICIN" = c("sat2"),
+    "SULFONAMIDE" = c("sul2"),
+    "TETRACYCLINE" = c("tet(A)", "tet(D)")
+  ),
+  "Human" = list(
+    "AMINOGLYCOSIDE" = c("aac(6')-Ie/aph(2'')-Ia", "aac(3)-IIe", "aac(3)-IId", "aac(3)-Ia", "ant(2'')-Ia", 
+                         "aph(3')-Ia", "aadA5", "aadA2", "aadA1", "aph(3'')-Ib", "aph(6)-Id"),
+    "BETA-LACTAM" = c("blaTEMp_C32T", "blaTEMp_G162T", "ftsI_N337NYRIN", "ftsI_I336IKYRI", "blaTEM-1", "blaI", 
+                      "blaTEM-190", "blaOXA", "blaZ", "blaR1", "blaNDM-5", "blaCTX-M-15", "blaOXA-1", "blaCTX-M-27", 
+                      "blaOXA-10", "blaCMY-42", "blaOXA-1181", "blaDHA-1", "mecA"),
+    "QUINOLONE" = c("gyrA_D87N", "gyrA_S83L", "parC_S80I", "parE_S458A", "parC_E84G", "parE_L416F", "qepA4", 
+                    "parC_E84V", "parE_I529L", "parE_E460D", "qnrS1", "qnrS", "qnrB4"),
+    "STREPTOTHRICIN" = c("sat2"),
+    "SULFONAMIDE" = c("sul1"),
+    "TETRACYCLINE" = c("tet(B)", "tet(A)", "tet(38)", "tet(K)")
+  ),
+  "Nile_perch" = list(
+    "AMINOGLYCOSIDE" = c("aac(3)-IId", "aadA1", "aph(3'')-Ib", "aph(6)-Id", "aadA2"),
+    "BETA-LACTAM" = c("blaTEM-1", "blaCTX-M-15"),
+    "QUINOLONE" = c("gyrA_S83L", "parE_S458A", "parC_S80I", "gyrA_D87N", "qepA4", "parC_E84K", "parE_L416F"),
+    "STREPTOTHRICIN" = c("sat2"),
+    "SULFONAMIDE" = c("sul2", "sul1"),
+    "TETRACYCLINE" = c("tet(B)", "tet(D)")
+  ),
+  "Livestock_Kenya" = list(
+    "AMINOGLYCOSIDE" = c("aph(3')-Ia", "aadA1", "aph(6)-Id", "aph(3'')-Ib", "aadA5", "aadA2"),
+    "BETA-LACTAM" = c("blaTEMp_C32T", "blaTEM-1", "blaOXA-1"),
+    "QUINOLONE" = c("qnrS1", "parC_S80I", "gyrA_S83L", "gyrA_D87Y", "gyrA_D87N", "parE_S458T", "qepA4"),
+    "STREPTOTHRICIN" = c("sat2"),
+    "SULFONAMIDE" = c("sul1", "sul2"),
+    "TETRACYCLINE" = c("tet(A)", "tet(B)")
+  ),
+  "Livestock" = list(
+    "AMINOGLYCOSIDE" = c("aac(3)-IId", "aac(3)-IIe", "aph(6)-Id", "aph(3'')-Ib", "aadA5"),
+    "BETA-LACTAM" = c("blaTEM-1", "blaCTX-M-15", "blaOXA-1"),
+    "QUINOLONE" = c("qnrS1", "gyrA_D87N", "gyrA_S83L", "parC_S80I", "parE_S458A"),
+    "SULFONAMIDE" = c("sul1", "sul2"),
+    "TETRACYCLINE" = c("tet(A)", "tet(B)")
+  )
+)
+
+
+
+create_newick_stepwise <- function(data) {
+  # Start with an empty string
+  newick_string <- ""
+  
+  # Manually process each antibiotic class
+  newick_string <- paste0(newick_string, "(")
+  
+  # Process each class and join its genes with a comma
+  newick_string <- paste0(newick_string, 
+                          "AMINOGLYCOSIDE: ", paste(data[["AMINOGLYCOSIDE"]], collapse = ","), ",")
+  newick_string <- paste0(newick_string, 
+                          "BETA-LACTAM: ", paste(data[["BETA-LACTAM"]], collapse = ","), ",")
+  newick_string <- paste0(newick_string, 
+                          "QUINOLONE: ", paste(data[["QUINOLONE"]], collapse = ","), ",")
+  newick_string <- paste0(newick_string, 
+                          "STREPTOTHRICIN: ", paste(data[["STREPTOTHRICIN"]], collapse = ","), ",")
+  newick_string <- paste0(newick_string, 
+                          "SULFONAMIDE: ", paste(data[["SULFONAMIDE"]], collapse = ","), ",")
+  newick_string <- paste0(newick_string, 
+                          "TETRACYCLINE: ", paste(data[["TETRACYCLINE"]], collapse = ","))
+  newick_string <- paste0(newick_string, ")")
+  
+  return(newick_string)
+}
+
+####
+newick_env_fish <- create_newick_stepwise(arg_hierarchy[["Environment and Fish"]])
+
+# Similarly, manually process other sources (Human, Nile_perch, etc.)
+newick_human <- create_newick_stepwise(arg_hierarchy[["Human"]])
+newick_nile_perch <- create_newick_stepwise(arg_hierarchy[["Nile_perch"]])
+newick_livestock_kenya <- create_newick_stepwise(arg_hierarchy[["Livestock_Kenya"]])
+newick_livestock <- create_newick_stepwise(arg_hierarchy[["Livestock"]])
+
+##########
+final_newick_string <- paste0("(", newick_env_fish, ",", newick_human, ",", newick_nile_perch, ",", 
+                              newick_livestock_kenya, ",", newick_livestock, ");")
+
+###########
+cat(substr(final_newick_string_clean, 1, 500)) 
+
+final_newick_string_clean <- gsub("[[:cntrl:]]", "", final_newick_string_clean)  # Remove control characters
+final_newick_string_clean <- gsub("\\s+", " ", final_newick_string_clean)  # Remove extra whitespaces
+
+############
+cat(final_newick_string_clean)
+
+final_newick_string_clean <- "((AMINOGLYCOSIDE: aac(3)-IId,aac(3)-IIe,aph(3)-Ib,aph(6)-Id,aadA1,aadA5,BETA-LACTAM: blaTEMp_C32T,blaTEM-1,blaSHV-11,blaSHV-1,blaTEM,blaOXA,blaOXA-301,blaCTX-M-15,blaOXA-1,blaCMY,blaCTX-M-55,QUINOLONE: qnrS1,qnrB1,qnrB48,gyrA_D87N,gyrA_S83L,parC_E84V,parC_S80I,parE_I529L,gyrA_S83A,parE_I355T,STREPTOTHRICIN: sat2,SULFONAMIDE: sul2,TETRACYCLINE: tet(A),tet(D)),(AMINOGLYCOSIDE: aac(6)-Ie/aph(2)-Ia,aac(3)-IIe,aac(3)-IId,aac(3)-Ia,ant(2)-Ia,aph(3)-Ia,aadA5,aadA2,aadA1,aph(3)-Ib,aph(6)-Id,BETA-LACTAM: blaTEMp_C32T,blaTEMp_G162T,ftsI_N337NYRIN,ftsI_I336IKYRI,blaTEM-1,blaI,blaTEM-190,blaOXA,blaZ,blaR1,blaNDM-5,blaCTX-M-15,blaOXA-1,blaCTX-M-27,blaOXA-10,blaCMY-42,blaOXA-1181,blaDHA-1,mecA,QUINOLONE: gyrA_D87N,gyrA_S83L,parC_S80I,parE_S458A,parC_E84G,parE_L416F,qepA4,parC_E84V,parE_I529L,parE_E460D,qnrS1,qnrS,qnrB4,STREPTOTHRICIN: sat2,SULFONAMIDE: sul1,TETRACYCLINE: tet(B),tet(A),tet(38),tet(K)),(AMINOGLYCOSIDE: aac(3)-IId,aadA1,aph(3)-Ib,aph(6)-Id,aadA2,BETA-LACTAM: blaTEM-1,blaCTX-M-15,QUINOLONE: gyrA_S83L,parE_S458A,parC_S80I,gyrA_D87N,qepA4,parC_E84K,parE_L416F,STREPTOTHRICIN: sat2,SULFONAMIDE: sul2,sul1,TETRACYCLINE: tet(B),tet(D)),(AMINOGLYCOSIDE: aph(3)-Ia,aadA1,aph(6)-Id,aph(3)-Ib,aadA5,aadA2,BETA-LACTAM: blaTEMp_C32T,blaTEM-1,blaOXA-1,QUINOLONE: qnrS1,parC_S80I,gyrA_S83L,gyrA_D87Y,gyrA_D87N,parE_S458T,qepA4,STREPTOTHRI...";
+
+####
+tree <- tryCatch({
+  read.tree(text = final_newick_string_clean)
+}, error = function(e) {
+  cat("Error in tree parsing:", e$message, "\n")
+  NULL
+})
+###
+if (!is.null(tree)) {
+  ggtree(tree, layout = "circular")
+} else {
+  cat("Failed to create a tree.\n")
+}
+
+##################
+final_newick_string_clean <- gsub("[^a-zA-Z0-9:(),;-]", "", final_newick_string)
+
+# Check if parentheses are balanced in the Newick string
+check_parentheses <- function(newick) {
+  open_count <- sum(grepl("\\(", newick))
+  close_count <- sum(grepl("\\)", newick))
+  return(open_count == close_count)
+}
+
+if (check_parentheses(final_newick_string_clean)) {
+  cat("Parentheses are balanced.\n")
+} else {
+  cat("Parentheses are not balanced.\n")
+  
+  # Remove extra spaces
+  final_newick_string_clean <- gsub("\\s+", "", final_newick_string_clean)
+  
+  # Try reading the cleaned tree again
+  tree <- tryCatch({
+    read.tree(text = final_newick_string_clean)
+  }, error = function(e) {
+    cat("Error in tree parsing:", e$message, "\n")
+    NULL
+  })
+  
+  if (!is.null(tree)) {
+    ggtree(tree, layout = "circular")
+  } else {
+    cat("Failed to create a tree.\n")
+  }
+
+##############
+  # Escape special characters or remove them
+  # Clean Newick string: Remove excessive spaces, extra commas, and special characters in labels
+  final_newick_string_clean <- gsub(",+", ",", final_newick_string_clean)  # Collapse multiple commas
+  final_newick_string_clean <- gsub("\\s+", "", final_newick_string_clean)  # Remove excess spaces
+  
+  # Try parsing the cleaned string again
+  tree <- tryCatch({
+    read.tree(text = final_newick_string_clean)
+  }, error = function(e) {
+    cat("Error in tree parsing:", e$message, "\n")
+    NULL
+  })
+  
+  library(ape)
+  
+  # Attempt to read the tree
+  tree <- tryCatch({
+    read.tree(text = final_newick_string_clean)
+  }, error = function(e) {
+    cat("Error in tree parsing:", e$message, "\n")
+    NULL
+  })
+  
+  # Check if the tree is parsed successfully
+  if (!is.null(tree)) {
+    # Plot the tree using ape's plot function
+    plot(tree, main = "Phylogenetic Tree")
+  } else {
+    cat("Failed to create a tree.\n")
+  }
+  
+  # Define Newick-style data based on your example (simplified structure)
+  newick_string <- "((Environment_and_Fish_AMINOGLYCOSIDE: aac(3)-IId, aac(3)-IIe, aph(3'')-Ib), (Human_AMINOGLYCOSIDE: aac(6')-Ie/aph(2'')-Ia, aac(3)-IIe));"
+  ##########
+  newick_string <- "((Environment_and_Fish_AMINOGLYCOSIDE: aac(3)-IId, aac(3)-IIe, aph(3'')-Ib), (Human_AMINOGLYCOSIDE: aac(6')-Ie/aph(2'')-Ia, aac(3)-IIe));"
+  
+  # Try parsing the Newick string into a tree
+  tree <- tryCatch({
+    read.tree(text = newick_string)
+  }, error = function(e) {
+    cat("Error in tree parsing:", e$message, "\n")
+    NULL
+  })
+ #########
+  
+  newick_string <- '((\"Environment_and_Fish_AMINOGLYCOSIDE\": \"aac(3)-IId, aac(3)-IIe, aph(3__)Ib\"), (\"Human_AMINOGLYCOSIDE\": \"aac(6_)Ie/aph(2__)Ia, aac(3)-IIe\"));'
+  
+  tree <- tryCatch({
+    read.tree(text = newick_string)
+  }, error = function(e) {
+    cat("Error in tree parsing:", e$message, "\n")
+    NULL
+  })
+  
+  
+  
+  # Combine Elementsymbols by source and Class
+combined_data2 <- amr_data_all2 %>%
+  group_by(source, Class) %>%
+  summarise(CombinedElements = paste(CombinedElements, collapse = ", "), .groups = "drop")
+
+write.csv(combined_data2, "combined_data_no_subclass_2025_2.csv")
+
+# Display the resulting data frame
+print(combined_data)
+
+
+setwd("/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/mlst_analysis")
+
+BiocManager::install("igraph")
+library(igraph)
+library(ape)
+library(ggplot2)
+#####
+# Load required libraries
+library(igraph)
+library(ape)
+library(ggplot2)
+
+# Load MLST results (ensure tab-separated file)
+mlst_data <- read.table("mlst_results_all.txt", sep="\t", header=FALSE, stringsAsFactors=FALSE)
+
+# Define column names
+colnames(mlst_data) <- c("Sample_id", "Species", "ST", "dinB", "icdA", "pabB", "polB", "putP", "trpA", "trpB", "udiA", " source")
+
+# Extract allele profiles (excluding Isolate, Species, ST, and Source)
+allele_profiles <- mlst_data[, 4:9]
+
+#allele_profiles <- as.data.frame(lapply(allele_profiles, as.numeric))
+
+# Compute Hamming distance function
+hamming_distance <- function(x, y) sum(x != y)
+
+# Generate a pairwise distance matrix
+distance_matrix <- as.matrix(dist(allele_profiles, method="manhattan")) # Manhattan ~ Hamming distance
+sum(is.na(distance_matrix))  # Count NA values
+sum(is.nan(distance_matrix)) # Count NaN values
+
+
+distance_matrix <- na.omit(distance_matrix)
+
+# Convert to a graph
+g <- graph_from_adjacency_matrix(distance_matrix, mode="undirected", weighted=TRUE)
+
+# Compute Minimum Spanning Tree (MST)
+mst <- mst(g)
+
+# Assign colors to each isolate based on source
+source_colors <- rainbow(length(unique(mlst_data$Source)))
+names(source_colors) <- unique(mlst_data$Source)
+
+node_colors <- source_colors[mlst_data$Source]
+
+# Plot MST
+plot(mst, 
+     vertex.label=mlst_data$Isolate, 
+     vertex.color=node_colors, 
+     edge.width=E(mst)$weight / max(E(mst)$weight) * 5, # Scale edge width
+     main="Minimum Spanning Tree of MLST Data")
+
+# Add legend
+legend("topright", legend=names(source_colors), fill=source_colors, title="Isolate Source")
+
+
+
+
+####
+ggplot(summary, aes(x = source, y = Class, fill = Count)) +
+  geom_tile() +
+  facet_wrap(~ Subclass) +
+  scale_fill_gradient(low = "white", high = "blue") +
+  theme_minimal() +
+  labs(title = "Distribution of Antibiotic Classes and Subclasses by Source",
+       x = "Source",
+       y = "Antibiotic Class",
+       fill = "Count")
+
+
+amr_data <- read.delim("amr_results.txt", header = TRUE, sep = "\t")
+
+# View first few rows of the data
+head(amr_data)
+# If necessary, remove non-numeric columns (e.g., Gene column)
+amr_matrix <- amr_data[, -1]  # Assuming first column is gene names
+
+# Convert to matrix
+amr_matrix <- as.matrix(amr_matrix)
+
+sum(is.na(amr_matrix))
+
+amr_matrix[is.na(amr_matrix)] <- 0
+
+amr_matrix <- apply(amr_matrix, 2, function(x) ifelse(is.na(x), median(x, na.rm=TRUE), x))
+
+amr_matrix <- amr_matrix[rowSums(is.na(amr_matrix)) < ncol(amr_matrix) * 0.5, ]
+
+amr_matrix <- amr_matrix[, colSums(is.na(amr_matrix)) < nrow(amr_matrix) * 0.5]
+
+
+library(pheatmap)
+library(ggheatmap)
+
+pheatmap(amr_matrix)
+
+# Plot heatmap
+pheatmap(amr_matrix, 
+         cluster_rows = TRUE, 
+         cluster_cols = TRUE, 
+         show_rownames = TRUE, 
+         show_colnames = TRUE, 
+         main = "AMR Gene Heatmap of E. coli Isolates")
+
+
+
+# Load the VCF file (Replace 'your_file.vcf' with actual file path)
+vcf_file <- read.vcfR("merge_all.vcf.gz")
+######
+vcf <- read.vcfR("input.vcf")
+gt <- extract.gt(vcf_file, return.alleles = FALSE)
+missing <- apply(gt, 2, function(x) sum(is.na(x))/length(x))  # Calculate missing rate
+barplot(missing, main="Missing Genotype Frequency", col="red")
+
+
+
+
+# Convert VCF to a genetic distance matrix
+genotype_matrix1 <- extract.gt(vcf_file, return.alleles = FALSE) # Extract genotype data
+
+genotype_matrix <- na.omit(genotype_matrix1)  # Remove rows with NA
+
+
+# Convert genotype matrix to a numeric format (e.g., 0, 1, 2 for homozygous/heterozygous)
+genotype_matrix[genotype_matrix == "0/0"] <- 0
+genotype_matrix[genotype_matrix == "0/1"] <- 1
+genotype_matrix[genotype_matrix == "1/1"] <- 2
+genotype_matrix <- apply(genotype_matrix, 2, as.numeric)  # Convert to numeric matrix
+
+# Compute a distance matrix (Euclidean or other distance metrics)
+distance_matrix <- dist(genotype_matrix, method = "euclidean") 
+
+# Convert to matrix form
+distance_matrix <- as.matrix(distance_matrix)
+
+# Assign row and column names (Sample IDs)
+rownames(distance_matrix) <- colnames(distance_matrix) <- colnames(genotype_matrix)
+
+
+################################
+  
+  
+
+
+  
