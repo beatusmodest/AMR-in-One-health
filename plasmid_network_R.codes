@@ -1,5 +1,5 @@
 setwd("/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/plasmid_analysis")
-# Load the libraries
+# Load all libraries required for this analysis. If any of the required libraries are not installed, install them first and then load them.
 library(ape)
 library(vcfR)
 library(pheatmap)
@@ -22,23 +22,12 @@ input_data_nile_perch <- read.csv("plasmid_info_nile_perch.csv")
 input_data_human <- read.csv("plasmid_info_human.csv")
 input_data_livestock_tz <- read.csv("plasmid_info_livestock.csv")
 input_data_fish_envo <- read.csv("plasmid_info_fish_envi.csv")
+
+
 ###### merge the 4 files
 merged_df_all_plasmid <- rbind(input_data_nile_perch, input_data_human, input_data_livestock_tz,input_data_fish_envo )
 
 
-
-# Load the igraph library
-library(igraph)
-
-# Input files
-input_data_kenya <- read.csv("plasmid_positions_kenya.csv", stringsAsFactors = FALSE)
-input_data_nile_perch <- read.csv("plasmid_info_nile_perch.csv")
-input_data_human <- read.csv("plasmid_info_human.csv")
-input_data_livestock_tz <- read.csv("plasmid_info_livestock.csv")
-input_data_fish_envo <- read.csv("plasmid_info_fish_envi.csv")
-
-###### merge the 4 files
-merged_df_all_plasmid <- rbind(input_data_nile_perch, input_data_human, input_data_livestock_tz,input_data_fish_envo )
 # Open the file for appending
 node_file_conn <- file(node_file, open = "a")
 edge_file_conn <- file(edge_file, open = "a")
