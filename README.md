@@ -1,14 +1,11 @@
 # AMR-in-One-health : Population Analysis of _E. coli_ Antimicrobial Resistance 
 
-Source code supporting population-level analysis of _Escherichia coli_ antimicrobial resistance within a One Health contex
+**Source code for population-level analysis of Escherichia coli antimicrobial resistance in a One Health context
+Overview**
 
+This repository contains the source code used for the population-level analysis of antimicrobial resistance (AMR) in Escherichia coli within a One Health framework. 
+The analyses integrate genomic data from human, animal, and environmental sources to investigate AMR distribution, population structure, and potential transmission dynamics across sectors.
 
-
-Overview
-
-This repository contains source code for population-level analysis of _Escherichia coli_ antimicrobial resistance (AMR) within a One Health framework. The analyses integrate data across human, animal, and environmental sources to investigate AMR distribution, population structure, and transmission dynamics.
-
-The paper title: One Health Analysis of Antimicrobial Resistance in _Escherichia coli_ from Humans, Animals, and the Environment
-
-##
+Associated publication:
+One Health Analysis of Antimicrobial Resistance in Escherichia coli from Humans, Animals, and the Environment
 The corresponding author can be contacted via: beatus.lyimo@nm-aist.ac.tz
