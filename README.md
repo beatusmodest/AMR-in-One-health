@@ -7,5 +7,5 @@ This repository contains the source code used for the population-level analysis 
 The analyses integrate genomic data from human, animal, and environmental sources to investigate AMR distribution, population structure, and potential transmission dynamics across sectors.
 
 Associated publication:
-One Health Analysis of Antimicrobial Resistance in Escherichia coli from Humans, Animals, and the Environment
+One Health Analysis of Antimicrobial Resistance in _Escherichia coli_ from Humans, Animals, and the Environment
 The corresponding author can be contacted via: beatus.lyimo@nm-aist.ac.tz
