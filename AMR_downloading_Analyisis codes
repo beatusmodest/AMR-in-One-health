@@ -3,8 +3,8 @@
 ## LIST OF ACCESSION NUMBER
 ## Data Preprocessing
 ## Quality check:
-### Searching from NCBI using key word Tanzania "Escherichia coli" 
-### Download samples from Kenya (accession numbers PRJEB32607)
+### Searching from NCBI 
+### Download samples from NCBI
 prefetch ERR3330256 
 prefetch ERR3330255
 prefetch ERR3330254
