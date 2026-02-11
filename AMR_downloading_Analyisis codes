@@ -5,6 +5,7 @@
 ## Quality check:
 ### Searching from NCBI 
 ### Download samples from NCBI
+###### KENYA
 prefetch ERR3330256 
 prefetch ERR3330255
 prefetch ERR3330254
