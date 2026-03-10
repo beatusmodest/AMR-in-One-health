@@ -1,4 +1,4 @@
-# AMR-in-One-health : Population Analysis of _E. coli_ Antimicrobial Resistance 
+# AMR-in-One-health : Population Analysis of _E. coli_ Antimicrobial Resistance# 
 
 **Source code for population-level analysis of _Escherichia coli_ antimicrobial resistance in a One Health context
 Overview**
