@@ -1,4 +1,4 @@
-setwd("/media/beatus/Beatus_Lyimo/E_COLI_paper_raw_data/plasmid_analysis")
+setwd("/media/E_COLI_paper_raw_data/plasmid_analysis")## set working directory
 # Load all libraries required for this analysis. If any of the required libraries are not installed, install them first and then load them.
 library(ape)
 library(vcfR)
@@ -9,15 +9,26 @@ library(ggVennDiagram)
 library(igraph)
 
 #############
+# If any of the required libraries are not installed, install them first and then load them.
+
+packages <- c("ape", "vcfR", "pheatmap", "RColorBrewer", "tidyverse", "ggVennDiagram", "igraph")
+
+# Install missing packages
+installed <- packages %in% installed.packages()[, "Package"]
+if (any(!installed)) {
+  install.packages(packages[!installed])
+}
+
+# Load packages
+lapply(packages, library, character.only = TRUE)
+
 
 ####plasmid network analysis
 
 #input_file <- "plasmid_positions.csv"  # Plasmid names and sources
 
 
-
-
-input_data_kenya <- read.csv("plasmid_positions_kenya.csv", stringsAsFactors = FALSE)
+input_data_ke <- read.csv("plasmid_positions_kenya.csv", stringsAsFactors = FALSE)
 input_data_nile_perch <- read.csv("plasmid_info_nile_perch.csv")
 input_data_human <- read.csv("plasmid_info_human.csv")
 input_data_livestock_tz <- read.csv("plasmid_info_livestock.csv")
