@@ -930,21 +930,6 @@ mafft --auto all_samples.fasta > all_samples_aligned.fasta
 
 
 
-
-
-
-############### Copy files to hpc
-scp all_samples.fasta blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_genome
-
-scp renamed_sequences_kcri.fasta  blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_genome
-
-scp renamed_fish_sequences.fasta  blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_genome
-scp blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_genome/combined_all_samples.fasta .
-
-scp blyimo@hpc.ilri.cgiar.org:/home/blyimo/beatus_2024/bacteria_genome/renamed_* .
-pwd: clemence2010
-
-
 awk '/^>/{header=$0; count[header]++; if(count[header]>1) header=header"_"count[header]; print header; next} {print}' all_samples.fasta > all_samples_unique.fasta
 
 awk '/^>/ {print ">raw_kenya_" ++i; next} {print}' raw_kenya_merged.fasta > renamed_kenya.fasta
